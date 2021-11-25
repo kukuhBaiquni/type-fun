@@ -1,14 +1,14 @@
-export interface i_Towns {
+export type TYPE_TOWN = {
   name: string
   img: string
   bgColor: string
   textColor: string
   hoverTextColor?: string
   hoverBgColor: string
-  townId: number,
+  townId: number
 }
 
-const TOWNS: i_Towns[] = [
+const TOWNS = [
   {
     name: 'Ruben',
     img: 'https://firebasestorage.googleapis.com/v0/b/elfun-web-app.appspot.com/o/images%2Ftown%2Fruben.png?alt=media&token=d3b2870f-4dc0-49fc-8e5d-640284cd72b9',

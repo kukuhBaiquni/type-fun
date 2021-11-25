@@ -1,5 +1,5 @@
 import LeftNavigation from 'components/sections/left-navigation'
-// import RightNavigation from 'components/right-navigation/contributions'
+import RightNavigation from 'components/sections/right-navigation'
 import dynamic from 'next/dynamic'
 import { ReactElement } from 'react'
 
@@ -24,7 +24,7 @@ export default function ContributionLayout(props:Props) {
             <div className='w-full transition-general'>
               {children}
             </div>
-            {/* <RightNavigation /> */}
+            <RightNavigation />
           </div>
         </div>
       </div>

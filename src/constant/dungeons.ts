@@ -1,11 +1,4 @@
-export interface i_Dungeons {
-  name: string
-  img: string
-  townId: number
-  dungeonId: number
-}
-
-const DUNGEONS: i_Dungeons[] = [
+const DUNGEONS = [
   {
     name: 'Tree of Life',
     img: 'https://firebasestorage.googleapis.com/v0/b/elfun-web-app.appspot.com/o/images%2Fdungeon%2Ftree-of-life.png?alt=media&token=6e494ab9-7bff-45ba-961c-47183bb440c3',
