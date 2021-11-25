@@ -2,6 +2,14 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 
 const Home: NextPage = function () {
+  interface User {
+    name: string,
+    age: number,
+  }
+  const user: User = {
+    name: 'wowo',
+    age: 9,
+  }
   return (
     <div>
       <Head>
@@ -10,7 +18,7 @@ const Home: NextPage = function () {
         <link href='/favicon.ico' rel='icon' />
       </Head>
       <main className='bg-pink-600'>
-        asasd
+        asasd {user.name}
       </main>
 
     </div>
