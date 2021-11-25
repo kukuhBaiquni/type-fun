@@ -1,6 +1,7 @@
 import LeftNavigation from 'components/sections/left-navigation'
 // import RightNavigation from 'components/right-navigation/contributions'
 import dynamic from 'next/dynamic'
+import { ReactElement } from 'react'
 
 const Header = dynamic(
   () => import('../sections/header'),
@@ -8,7 +9,7 @@ const Header = dynamic(
 )
 
 interface Props {
-  children: Node
+  children: ReactElement
 }
 
 export default function ContributionLayout(props:Props) {
