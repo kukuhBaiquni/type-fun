@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-nunito;
+  }
+  button {
+    &:focus {
+      @apply outline-none;
+    }
+  }
+  .btn-primary {
+    @apply bg-cyan-400 px-8 py-2 hover:bg-cyan-500 rounded text-gray-50 transition-all duration-300 border-none outline-none;
+  }
+  .text-general {
+    @apply text-gray-600 dark:text-gray-400;
+  }
+  .bg-general {
+    @apply bg-white dark:bg-gray-900;
+  }
+  .bg-paper-general {
+    @apply bg-gray-200 dark:bg-gray-800;
+  }
+  .border-general {
+    @apply border dark:border-gray-600 border-gray-300;
+  }
+  .border-input {
+    @apply border dark:border-gray-600 border-gray-400;
+  }
+  .border-input-focus {
+    @apply border border-sky-500 dark:border-gray-500 bg-sky-100 dark:bg-gray-700;
+  }
+  .action-icon {
+    @apply cursor-pointer dark:hover:bg-gray-800 hover:bg-gray-300 p-0.5 rounded;
+  }
+
+  li .job-nesting:hover > div {
+    opacity: 1;
+  }
+  .cursor-grab {
+    cursor: grab;
+  }
+
+  .transition-general {
+    @apply transition-all duration-300;
+  }
+  @import "component/scroll";
+}

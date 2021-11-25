@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Layout from 'components/layouts/default-layout'
 import { ReactElement } from 'react'
 
-function Home() {
+function Home():ReactElement {
   return (
     <div>
       <Head>
