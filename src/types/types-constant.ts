@@ -19,5 +19,5 @@ export interface TYPE_TOWN {
   textColor: string
   hoverTextColor?: string
   hoverBgColor: string
-  townId: number,
+  townId: number
 }
