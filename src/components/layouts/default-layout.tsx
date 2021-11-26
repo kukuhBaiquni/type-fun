@@ -12,7 +12,7 @@ interface Props {
   children: ReactElement
 }
 
-export default function ContributionLayout(props:Props) {
+const ContributionLayout = (props:Props) => {
   const { children } = props
   return (
     <div className='bg-general transition-all duration-300 min-h-screen'>
@@ -31,3 +31,5 @@ export default function ContributionLayout(props:Props) {
     </div>
   )
 }
+
+export default ContributionLayout

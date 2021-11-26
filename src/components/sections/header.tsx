@@ -7,7 +7,7 @@ import {
 import useDarkMode from 'hooks/useDarkMode'
 import logo from '../../../public/images/logo.png'
 
-function Header() {
+const Header = () => {
   const { theme, setTheme } = useDarkMode()
 
   return (

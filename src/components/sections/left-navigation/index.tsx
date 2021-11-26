@@ -87,7 +87,7 @@ const routes: Routes[] = [{
   h: '0',
 }]
 
-export default function LeftNavigation() {
+const LeftNavigation = () => {
   const [navigation, setNavigation] = useImmer(routes)
 
   const onToggle = useCallback((name) => {
@@ -139,3 +139,5 @@ export default function LeftNavigation() {
     </nav>
   )
 }
+
+export default LeftNavigation
