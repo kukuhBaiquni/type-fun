@@ -6,11 +6,7 @@ const colors = require('tailwindcss/colors')
 
 module.exports = {
   purge: {
-    content: [
-      './src/pages/**/*.{js,ts,jsx,tsx}',
-      './src/components/**/*.{js,ts,jsx,tsx}',
-      './src/layouts/**/*.{js,ts,jsx,tsx}',
-    ],
+    content: ['./src/**/*.{js,jsx,ts,tsx}'],
     safelist: [
       'bg-elsword',
       'text-elsword',

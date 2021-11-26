@@ -1,3 +1,4 @@
+const path = require('path')
 module.exports = {
   stories: [
     '../src/**/*.stories.mdx',
@@ -6,7 +7,8 @@ module.exports = {
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
-    '@storybook/addon-docs'
+    '@storybook/addon-docs',
+    '@storybook/addon-postcss'
   ],
   typescript: {
     check: false,
@@ -18,5 +20,13 @@ module.exports = {
         esModuleInterop: false,
       },
     },
+  },
+  webpackFinal: async (config) => {
+    config.module.rules.push({
+      test: /\.css$/,
+      use: [ 'postcss-loader' ],
+      include: path.resolve(__dirname, '../'),
+    })
+    return config
   },
 }
