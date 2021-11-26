@@ -9,7 +9,7 @@ interface Props {
   town: TYPE_TOWN
 }
 
-function Dungeon(props: Props):ReactElement {
+const Dungeon = (props: Props):ReactElement => {
   const { townId, town } = props
   const url = (text:string) => text.toLowerCase().replace(/\s/g, '-')
   const data = DUNGEONS.filter((dungeon) => dungeon.townId === townId)

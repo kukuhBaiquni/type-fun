@@ -5,7 +5,7 @@ import TOWNS from 'constant/towns'
 import clsx from 'clsx'
 import Dungeons from './dungeon'
 
-export default function Town() {
+const Town = () => {
   const url = (text:string) => text.toLowerCase().replace(/\s/g, '-')
 
   return (
@@ -35,3 +35,5 @@ export default function Town() {
     </Fragment>
   )
 }
+
+export default Town
