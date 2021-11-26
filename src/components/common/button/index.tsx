@@ -6,8 +6,8 @@ export interface TYPE_BUTTON {
   type?: 'button' | 'submit'
   label?: string
   onClick?: () => void
-  leftIcon?: ReactElement
-  rightIcon?: ReactElement
+  leftIcon?: ReactElement | null
+  rightIcon?: ReactElement | null
   fluid?: boolean
   size?: 'sm' | 'md'
   variant?: 'primary-solid' | 'primary-outlined' | 'danger-solid' | 'danger-outlined' | 'submit-solid' | 'submit-outlined'
