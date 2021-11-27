@@ -6,6 +6,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "doc": "jsdoc -c jsdoc.json",
     "fix": "eslint --ext=ts,tsx . --fix",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
@@ -45,6 +46,7 @@
     "@typescript-eslint/parser": "^5.4.0",
     "autoprefixer": "^9",
     "babel-loader": "^8.2.3",
+    "better-docs": "^2.3.2",
     "eslint": "^8.3.0",
     "eslint-config-airbnb": "^19.0.1",
     "eslint-config-next": "12.0.4",
@@ -53,6 +55,7 @@
     "eslint-plugin-react": "^7.27.1",
     "eslint-plugin-react-hooks": "^4.3.0",
     "husky": "^7.0.4",
+    "jsdoc": "^3.6.7",
     "lint-staged": "^12.1.2",
     "postcss": "^7",
     "stylelint-config-standard": "^24.0.0",
