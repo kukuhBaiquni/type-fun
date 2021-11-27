@@ -4,7 +4,7 @@ import Button, { TYPE_BUTTON } from 'components/common/button'
 
 export default {
   component: Button,
-  title: 'Components/Common/Button',
+  title: 'Components/common/button',
   argTypes: {
     size: {
       options: ['sm', 'md'],
