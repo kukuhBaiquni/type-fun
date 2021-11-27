@@ -4,38 +4,30 @@ import LeftNavigation from "../../components/sections/left-navigation";
 <Meta
   component={LeftNavigation}
   title="Components/sections/left-navigation/main"
-  decorators={[
-    (StoryComponent) => (
-      <div>
-        <StoryComponent />
-      </div>
-    ),
-  ]}
+  decorators={[(StoryComponent) => <StoryComponent />]}
 />
 
 export const Template = () => <LeftNavigation />;
 
 # Left Navigation
 
+📓 Author: Kukuh Baiquni | <kukuh.baiquni@gmail.com> <br/>
+⏰ Documented at: Saturday November 27, 2021 - 22:49
+
 Component for displaying list of navigation link.
-This component only used by `/components/layouts/*` for **persistent display**.
-This component affected by theme toggler in `/components/sections/header`
+
+File Path: **`/components/sections/left-navigation/index.tsx`**. <br/>
+Used by: **Any layout components in `/components/layouts/*`**.
+
+Notes:
+
+- This component is affected by theme toggler **`<Header />`** ( file path: **`/components/sections/header`** ).
+- This component only used by **`/components/layouts/*`**.
 
 <Canvas>
   <Story name="main">{Template.bind({})}</Story>
 </Canvas>
 
-<!-- export default {
-  component: LeftNavigation,
-  title: 'Components/sections/left-navigation/left-navigation',
-  parameters: {
-    docs: {
-      description: {
-        component: 'Component for displaying list of navigation link. This component only used by ``/components/layouts/*`` for **persistent display**.'
-        + ' This component affected by theme toggler in ``/components/sections/header``',
-      },
-    },
-  },
-} as Meta
+### 📝 **Changelog**
 
-export const LeftNavigation_ = Template.bind({}) -->
+- _no recent changes_

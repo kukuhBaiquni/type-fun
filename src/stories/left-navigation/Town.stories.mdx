@@ -1,12 +1,12 @@
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import BaseClass from "components/sections/left-navigation/character/base-class";
+import Town from "components/sections/left-navigation/town/town";
 
 <Meta
-  component={BaseClass}
-  title="Components/sections/left-navigation/base-class"
+  component={Town}
+  title="Components/sections/left-navigation/town-dungeon"
   decorators={[
     (StoryComponent) => (
-      <nav className="font-titillium mr-0 sm:mr-3 hidden lg:block mb-10">
+      <nav className="font-titillium sm:mr-3 hidden lg:block mb-10">
         <ul className="py-2 px-2 bg-paper-general w-52 transition-general">
           <StoryComponent />
         </ul>
@@ -15,23 +15,23 @@ import BaseClass from "components/sections/left-navigation/character/base-class"
   ]}
 />
 
-export const Template = () => <BaseClass />;
+export const Template = () => <Town />;
 
-# Base Class
+# Town
 
 📓 Author: Kukuh Baiquni | <kukuh.baiquni@gmail.com> <br/>
-⏰ Documented at: Saturday November 27, 2021 - 22:34
+⏰ Documented at: Saturday November 27, 2021 - 23:28
 
-Sub Component of **`<LeftNavigation />`** for displaying **`BaseClass`** navigation.
+Sub Component of **`<LeftNavigation />`** for displaying **`Town/Dungeon`** navigation.
 
-File Path: **`/components/sections/left-navigation/character/base-class.tsx`** <br/>
+File Path: **`/components/sections/left-navigation/town/town.tsx`** <br/>
 Used by: **`const routes: TYPE_ROUTES[]`** ( file path: **`/components/section/left-navigation/routes.tsx`** )
 
 Notes:
 
 - This component is affected by theme toggler **`<Header />`** ( file path: **`/components/sections/header`** ).
-- This component contain **`<NextClass />`** ( file path: **`/components/section/left-navigation/character/next-class.tsx`** )<br/>
-  You can hover over base class list at navigation below to see **`<NextClass />`** component.
+- This component contain **`<Dungeon />`** ( file path: **`/components/section/left-navigation/town/dungeon.tsx`** )<br/>
+  You can hover over town list at navigation below to see **`<Dungeon />`** component.
 - This component is wrapped manually using **[Decorators](https://storybook.js.org/docs/react/writing-stories/decorators)** in story mode.<br/>
   Because this component doesn't have natural wrapper, so we add it manually based on original component. See below.
 
@@ -48,7 +48,7 @@ Notes:
 > ```
 
 <Canvas>
-  <Story name="base-class">{Template.bind({})}</Story>
+  <Story name="town-dungeon">{Template.bind({})}</Story>
 </Canvas>
 
 ### 📝 **Changelog**

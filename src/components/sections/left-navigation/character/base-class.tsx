@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Fragment } from 'react'
 import clsx from 'clsx'
 import { baseClass } from 'constant/characters'
-import JobPath from './next-class'
+import NextClass from './next-class'
 
 const BaseClass = () => (
   <Fragment>
@@ -24,7 +24,7 @@ const BaseClass = () => (
             <p className='ml-1.5'>{item.name}</p>
           </a>
         </Link>
-        <JobPath characterIndex={index} />
+        <NextClass characterIndex={index} />
       </li>
     ))}
   </Fragment>
