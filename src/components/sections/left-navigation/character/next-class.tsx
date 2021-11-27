@@ -9,7 +9,7 @@ interface Props {
   characterIndex: number
 }
 
-const JobPath = (props:Props) => {
+const NextClass = (props:Props) => {
   const { characterIndex } = props
   const url = (text: string) => text.toLowerCase().replace(/\s/g, '-')
 
@@ -65,4 +65,4 @@ const JobPath = (props:Props) => {
   )
 }
 
-export default JobPath
+export default NextClass

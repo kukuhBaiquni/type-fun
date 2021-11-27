@@ -1,97 +1,15 @@
 import Link from 'next/link'
 import { ChevronDownIcon } from '@heroicons/react/solid'
 import { useImmer } from 'use-immer'
-import React, { Fragment, useCallback } from 'react'
+import { Fragment, useCallback } from 'react'
 import clsx from 'clsx'
-import Character from './character'
-import Town from './town'
-
-interface Routes {
-  name: string
-  path: string
-  childData: boolean
-  childRenderer: React.ReactChild | null
-  collapsed: boolean
-  h: string
-}
-
-const routes: Routes[] = [{
-  name: 'Main Page',
-  path: '/',
-  childData: false,
-  childRenderer: null,
-  collapsed: true,
-  h: '0',
-}, {
-  name: 'Recent Changes',
-  path: '/changes',
-  childData: false,
-  childRenderer: null,
-  collapsed: true,
-  h: '0',
-}, {
-  name: 'Characters',
-  path: '',
-  childData: true,
-  childRenderer: <Character />,
-  collapsed: true,
-  h: 'h-[480px]',
-}, {
-  name: 'Towns',
-  path: '',
-  childData: true,
-  childRenderer: <Town />,
-  collapsed: true,
-  h: 'h-[540px]',
-}, {
-  name: 'Equipments',
-  path: '/equipments',
-  childData: false,
-  childRenderer: null,
-  collapsed: true,
-  h: '0',
-}, {
-  name: 'Npc\'s',
-  path: '/npcs',
-  childData: false,
-  childRenderer: null,
-  collapsed: true,
-  h: '0',
-}, {
-  name: 'Titles',
-  path: '/titles',
-  childData: false,
-  childRenderer: null,
-  collapsed: true,
-  h: '0',
-}, {
-  name: 'Ice Burner (Costumes)',
-  path: '/ice-burners',
-  childData: false,
-  childRenderer: null,
-  collapsed: true,
-  h: '0',
-}, {
-  name: 'Character Systems',
-  path: '/character-systems',
-  childData: false,
-  childRenderer: null,
-  collapsed: true,
-  h: '0',
-}, {
-  name: 'Miscellaneous',
-  path: '/miscellaneous',
-  childData: false,
-  childRenderer: null,
-  collapsed: true,
-  h: '0',
-}]
+import routes, { TYPE_ROUTES } from './routes'
 
 const LeftNavigation = () => {
   const [navigation, setNavigation] = useImmer(routes)
 
   const onToggle = useCallback((name) => {
-    setNavigation((old: Routes[]) => {
+    setNavigation((old: TYPE_ROUTES[]) => {
       const nav = old.find((nv) => nv.name === name)
       if (nav) { nav.collapsed = !nav.collapsed }
     })
@@ -101,7 +19,7 @@ const LeftNavigation = () => {
     <nav className='font-titillium mr-0 sm:mr-3 hidden lg:block mb-10'>
       <ul className='py-2 px-2 bg-paper-general w-52 transition-general'>
         <div className='relative z-20'>
-          {navigation.map((item:Routes) => (
+          {navigation.map((item:TYPE_ROUTES) => (
             item.childData ? (
               <Fragment key={item.name}>
                 <span

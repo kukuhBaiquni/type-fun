@@ -1,9 +1,9 @@
 import { Meta, Story } from '@storybook/react'
-import LeftNavigation from '../components/sections/left-navigation'
+import LeftNavigation from 'components/sections/left-navigation'
 
 export default {
   component: LeftNavigation,
-  title: 'Components/Sections/LeftNavigation',
+  title: 'Components/Sections/LeftNavigation/LeftNavigation',
   parameters: {
     docs: {
       description: {
@@ -16,4 +16,4 @@ export default {
 
 const Template: Story = () => <LeftNavigation />
 
-export const LeftNavigationMain = Template.bind({})
+export const LeftNavigation_ = Template.bind({})

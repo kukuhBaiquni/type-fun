@@ -1,0 +1,50 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs'
+import BaseClass from '../../components/sections/left-navigation/character/base-class'
+
+<Meta
+  component={BaseClass}
+  title='Components/Sections/LeftNavigation/BaseClass'
+  decorators= {[
+    (StoryComponent) => (
+      <nav className='font-titillium mr-0 sm:mr-3 hidden lg:block mb-10'>
+        <ul className='py-2 px-2 bg-paper-general w-52 transition-general'>
+          <StoryComponent />
+        </ul>
+      </nav>
+    ),
+  ]}
+/>
+
+export const Template = () => <BaseClass />
+
+# jancok latoz
+
+
+
+// export default {
+//   component: BaseClass,
+//   title: 'Components/Sections/LeftNavigation/BaseClass',
+//   parameters: {
+//     docs: {
+//       description: {
+//         component: 'Sub Component of ``<LeftNavigation />``. Displaying ``BaseClass`` navigation.`'
+//         + ' This component affected by theme toggler in ``/components/sections/header``',
+//       },
+//     },
+//   },
+//   decorators: [
+//     (StoryComponent) => (
+//       <nav className='font-titillium mr-0 sm:mr-3 hidden lg:block mb-10'>
+//         <ul className='py-2 px-2 bg-paper-general w-52 transition-general'>
+//           <StoryComponent />
+//         </ul>
+//       </nav>
+//     ),
+//   ],
+// } as Meta
+/**
+ * This story is wrapped manually using same html structure with the original component.
+ */
+
+
+export const BaseClass_ = Template.bind({})
