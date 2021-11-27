@@ -4,7 +4,7 @@ import Button, { TYPE_BUTTON } from '../components/common/button'
 
 export default {
   component: Button,
-  title: 'Components/Button',
+  title: 'Components/Common/Button',
   argTypes: {
     size: {
       options: ['sm', 'md'],
@@ -46,12 +46,6 @@ export default {
 const Template: Story<TYPE_BUTTON> = (args) => <Button {...args} />
 
 export const ButtonMain = Template.bind({})
-export const ButtonPrimaryWithLeftIcon = Template.bind({})
-export const ButtonPrimaryWithRightIcon = Template.bind({})
-export const ButtonDangerWithLeftIcon = Template.bind({})
-export const ButtonDangerFluid = Template.bind({})
-export const ButtonPrimaryOutlined = Template.bind({})
-export const ButtonPrimaryOutlinedWithLeftIcon = Template.bind({})
 
 ButtonMain.args = {
   label: 'Button',
@@ -65,10 +59,26 @@ ButtonMain.args = {
   rightIcon: null,
 }
 
+export const ButtonPrimaryWithLeftIcon = Template.bind({})
+
 ButtonPrimaryWithLeftIcon.args = {
   ...ButtonMain.args,
   leftIcon: <TrashIcon className='w-5 h-5 mr-1' />,
 }
+
+ButtonPrimaryWithLeftIcon.parameters = {
+  docs: {
+    description: {
+      story: 'Example of displaying **Primary Button with Left Icon**',
+    },
+  },
+}
+
+export const ButtonPrimaryWithRightIcon = Template.bind({})
+export const ButtonDangerWithLeftIcon = Template.bind({})
+export const ButtonDangerFluid = Template.bind({})
+export const ButtonPrimaryOutlined = Template.bind({})
+export const ButtonPrimaryOutlinedWithLeftIcon = Template.bind({})
 
 ButtonPrimaryWithRightIcon.args = {
   ...ButtonMain.args,
