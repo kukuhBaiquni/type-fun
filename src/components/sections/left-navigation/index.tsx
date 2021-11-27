@@ -3,7 +3,7 @@ import { ChevronDownIcon } from '@heroicons/react/solid'
 import { useImmer } from 'use-immer'
 import React, { Fragment, useCallback } from 'react'
 import clsx from 'clsx'
-import Characters from './character'
+import Character from './character'
 import Town from './town'
 
 interface Routes {
@@ -33,7 +33,7 @@ const routes: Routes[] = [{
   name: 'Characters',
   path: '',
   childData: true,
-  childRenderer: <Characters />,
+  childRenderer: <Character />,
   collapsed: true,
   h: 'h-[480px]',
 }, {

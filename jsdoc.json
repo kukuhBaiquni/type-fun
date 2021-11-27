@@ -1,0 +1,36 @@
+{
+  "tags": {
+    "allowUnknownTags": true,
+    "dictionaries": ["jsdoc", "closure"]
+  },
+  "source": {
+    "include": ["src", "README.md"],
+    "includePattern": ".+\\.ts(doc|x)?$",
+    "excludePattern": "(node_modules/|docs)"
+  },
+  "plugins": [
+    "better-docs/component",
+    "better-docs/category",
+    "plugins/markdown",
+    "better-docs/typescript"
+  ],
+  "opts": {
+    "encoding": "utf-8",
+    "recurse": true,
+    "verbose": true,
+    "destination": "docs",
+    "template": "node_modules/better-docs"
+  },
+  "templates": {
+    "better-docs": {
+      "name": "Elfun",
+      "navigation": [
+        {
+          "label": "Github Repository",
+          "href": "https://github.com/kukuhBaiquni/type-fun"
+        }
+      ]
+    },
+    "search": true
+  }
+}
