@@ -1,0 +1,41 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import LeftNavigation from "../../components/sections/left-navigation";
+
+<Meta
+  component={LeftNavigation}
+  title="Components/sections/left-navigation/main"
+  decorators={[
+    (StoryComponent) => (
+      <div>
+        <StoryComponent />
+      </div>
+    ),
+  ]}
+/>
+
+export const Template = () => <LeftNavigation />;
+
+# Left Navigation
+
+Component for displaying list of navigation link.
+This component only used by `/components/layouts/*` for **persistent display**.
+This component affected by theme toggler in `/components/sections/header`
+
+<Canvas>
+  <Story name="main">{Template.bind({})}</Story>
+</Canvas>
+
+<!-- export default {
+  component: LeftNavigation,
+  title: 'Components/sections/left-navigation/left-navigation',
+  parameters: {
+    docs: {
+      description: {
+        component: 'Component for displaying list of navigation link. This component only used by ``/components/layouts/*`` for **persistent display**.'
+        + ' This component affected by theme toggler in ``/components/sections/header``',
+      },
+    },
+  },
+} as Meta
+
+export const LeftNavigation_ = Template.bind({}) -->

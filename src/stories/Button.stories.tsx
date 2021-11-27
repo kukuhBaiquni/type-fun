@@ -1,6 +1,6 @@
 import { TrashIcon } from '@heroicons/react/solid'
 import { Meta, Story } from '@storybook/react'
-import Button, { TYPE_BUTTON } from '../components/common/button'
+import Button, { TYPE_BUTTON } from 'components/common/button'
 
 export default {
   component: Button,
@@ -45,12 +45,19 @@ export default {
       description: 'Event handler when button is clicked',
     },
     leftIcon: {
-      description: 'Any ReactElement to display before text inside button',
+      description: 'Any ``ReactElement`` to display before text inside button',
       control: null,
     },
     rightIcon: {
-      description: 'Any ReactElement to display after text inside button',
+      description: 'Any ``ReactElement`` to display after text inside button',
       control: null,
+    },
+  },
+  parameters: {
+    docs: {
+      description: {
+        component: 'Component for execute various command & user interactions',
+      },
     },
   },
 } as Meta

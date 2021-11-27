@@ -1,0 +1,45 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import BaseClass from "components/sections/left-navigation/character/base-class";
+
+<Meta
+  component={BaseClass}
+  title="Components/sections/left-navigation/base-class"
+  decorators={[
+    (StoryComponent) => (
+      <nav className="font-titillium mr-0 sm:mr-3 hidden lg:block mb-10">
+        <ul className="py-2 px-2 bg-paper-general w-52 transition-general">
+          <StoryComponent />
+        </ul>
+      </nav>
+    ),
+  ]}
+/>
+
+export const Template = () => <BaseClass />;
+
+# Base Class
+
+Sub Component of `<LeftNavigation />`. Displaying `BaseClass` navigation.
+This component is affected by theme toggler in `/components/sections/header`.
+
+Notes:
+
+- This component is affected by theme toggler in `/components/sections/header`.
+- This component is wrapped manually using **decorators** in story mode.
+  Because this component doesn't have natural wrapper, so we add it manually for better view. See below.
+
+> ```
+> decorators={[
+>  (StoryComponent) => (
+>    <nav className="font-titillium mr-0 sm:mr-3 hidden lg:block mb-10">
+>      <ul className="py-2 px-2 bg-paper-general w-52 transition-general">
+>        <StoryComponent /> <-- main story
+>     </ul>
+>    </nav>
+>  ),
+> ]}
+> ```
+
+<Canvas>
+  <Story name="base-class">{Template.bind({})}</Story>
+</Canvas>

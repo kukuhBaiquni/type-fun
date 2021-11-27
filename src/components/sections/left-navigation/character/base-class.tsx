@@ -3,9 +3,9 @@ import Link from 'next/link'
 import { Fragment } from 'react'
 import clsx from 'clsx'
 import { baseClass } from 'constant/characters'
-import JobPath from './job-path'
+import JobPath from './next-class'
 
-const Character = () => (
+const BaseClass = () => (
   <Fragment>
     {baseClass.map((item, index:number) => (
       <li
@@ -30,4 +30,4 @@ const Character = () => (
   </Fragment>
 )
 
-export default Character
+export default BaseClass
