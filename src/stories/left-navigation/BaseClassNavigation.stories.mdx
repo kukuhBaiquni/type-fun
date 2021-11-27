@@ -19,14 +19,19 @@ export const Template = () => <BaseClass />;
 
 # Base Class
 
-Sub Component of `<LeftNavigation />`. Displaying `BaseClass` navigation.
-This component is affected by theme toggler in `/components/sections/header`.
+📓 Author: Kukuh Baiquni | <kukuh.baiquni@gmail.com> <br/>
+⏰ Documented at: Saturday November 27, 2021 - 22:34
+
+Sub Component of **`<LeftNavigation />`** for displaying **`BaseClass`** navigation.
+
+File Path: **`/components/sections/left-navigation/base-class.tsx`** <br/>
+Used by: **`const routes: TYPE_ROUTES[]`** ( file path: **`/components/section/left-navigation/routes.tsx`** )
 
 Notes:
 
-- This component is affected by theme toggler in `/components/sections/header`.
-- This component is wrapped manually using **decorators** in story mode.
-  Because this component doesn't have natural wrapper, so we add it manually for better view. See below.
+- This component is affected by theme toggler **`<Header />`** ( file path: **`/components/sections/header`** ).
+- This component is wrapped manually using **[Decorators](https://storybook.js.org/docs/react/writing-stories/decorators)** in story mode.<br/>
+  Because this component doesn't have natural wrapper, so we add it manually based on original component. See below.
 
 > ```
 > decorators={[
@@ -43,3 +48,7 @@ Notes:
 <Canvas>
   <Story name="base-class">{Template.bind({})}</Story>
 </Canvas>
+
+### 📝 **Changelog**
+
+- _no recent changes_

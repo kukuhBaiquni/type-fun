@@ -1,4 +1,4 @@
-import Character from './character/base-class'
+import BaseClass from './character/base-class'
 import Town from './town/town'
 
 export interface TYPE_ROUTES {
@@ -28,7 +28,7 @@ const routes: TYPE_ROUTES[] = [{
   name: 'Characters',
   path: '',
   childData: true,
-  childRenderer: <Character />,
+  childRenderer: <BaseClass />,
   collapsed: true,
   h: 'h-[480px]',
 }, {
