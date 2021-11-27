@@ -10,6 +10,9 @@ export default {
       options: ['sm', 'md'],
       control: { type: 'radio' },
       description: 'Define size of a button',
+      defaultValue: {
+        summary: 'md',
+      },
     },
     variant: {
       options: [
@@ -17,17 +20,26 @@ export default {
       ],
       control: { type: 'select' },
       description: 'Define variant of a button',
+      defaultValue: {
+        summary: 'primary-solid',
+      },
     },
     type: {
       options: ['button', 'submit'],
       control: { type: 'radio' },
       description: 'HTML type of a button',
+      defaultValue: {
+        summary: 'button',
+      },
     },
     label: {
       description: 'Text inside button',
     },
     fluid: {
       description: 'If \'true\' the button will expand relative to parent',
+      defaultValue: {
+        summary: false,
+      },
     },
     onClick: {
       description: 'Event handler when button is clicked',
@@ -69,21 +81,27 @@ ButtonPrimaryWithLeftIcon.args = {
 ButtonPrimaryWithLeftIcon.parameters = {
   docs: {
     description: {
-      story: 'Example of displaying **Primary Button with Left Icon**',
+      story: 'Example of **Primary Button with Left Icon**, add ``margin-right`` to ``icon`` component to add space',
     },
   },
 }
 
 export const ButtonPrimaryWithRightIcon = Template.bind({})
-export const ButtonDangerWithLeftIcon = Template.bind({})
-export const ButtonDangerFluid = Template.bind({})
-export const ButtonPrimaryOutlined = Template.bind({})
-export const ButtonPrimaryOutlinedWithLeftIcon = Template.bind({})
 
 ButtonPrimaryWithRightIcon.args = {
   ...ButtonMain.args,
   rightIcon: <TrashIcon className='w-5 h-5 ml-1' />,
 }
+
+ButtonPrimaryWithRightIcon.parameters = {
+  docs: {
+    description: {
+      story: 'Example of **Primary Button with right Icon**, add ``margin-left`` to ``icon`` component to add space',
+    },
+  },
+}
+
+export const ButtonDangerWithLeftIcon = Template.bind({})
 
 ButtonDangerWithLeftIcon.args = {
   ...ButtonMain.args,
@@ -91,19 +109,57 @@ ButtonDangerWithLeftIcon.args = {
   leftIcon: <TrashIcon className='w-5 h-5 mr-1' />,
 }
 
+ButtonDangerWithLeftIcon.parameters = {
+  docs: {
+    description: {
+      story: 'Example of **Danger Button with left Icon**',
+    },
+  },
+}
+
+export const ButtonDangerFluid = Template.bind({})
+
 ButtonDangerFluid.args = {
   ...ButtonMain.args,
   variant: 'danger-solid',
   fluid: true,
 }
 
+ButtonDangerFluid.parameters = {
+  docs: {
+    description: {
+      story: 'Example of **Danger Button with full width**',
+    },
+  },
+}
+
+export const ButtonPrimaryOutlined = Template.bind({})
+
 ButtonPrimaryOutlined.args = {
   ...ButtonMain.args,
   variant: 'primary-outlined',
 }
 
+ButtonPrimaryOutlined.parameters = {
+  docs: {
+    description: {
+      story: 'Example of **Primary Button Outlined**',
+    },
+  },
+}
+
+export const ButtonPrimaryOutlinedWithLeftIcon = Template.bind({})
+
 ButtonPrimaryOutlinedWithLeftIcon.args = {
   ...ButtonMain.args,
   variant: 'primary-outlined',
   leftIcon: <TrashIcon className='w-5 h-5 mr-1' />,
+}
+
+ButtonPrimaryOutlinedWithLeftIcon.parameters = {
+  docs: {
+    description: {
+      story: 'Example of **Primary Button Outlined with left icon**',
+    },
+  },
 }
