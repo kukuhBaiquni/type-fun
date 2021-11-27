@@ -1,13 +1,13 @@
-import { Canvas, Meta, Story } from '@storybook/addon-docs'
-import BaseClass from '../../components/sections/left-navigation/character/base-class'
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import BaseClass from "components/sections/left-navigation/character/base-class";
 
 <Meta
   component={BaseClass}
-  title='Components/Sections/LeftNavigation/BaseClass'
-  decorators= {[
+  title="Components/sections/left-navigation/base-class"
+  decorators={[
     (StoryComponent) => (
-      <nav className='font-titillium mr-0 sm:mr-3 hidden lg:block mb-10'>
-        <ul className='py-2 px-2 bg-paper-general w-52 transition-general'>
+      <nav className="font-titillium mr-0 sm:mr-3 hidden lg:block mb-10">
+        <ul className="py-2 px-2 bg-paper-general w-52 transition-general">
           <StoryComponent />
         </ul>
       </nav>
@@ -15,36 +15,31 @@ import BaseClass from '../../components/sections/left-navigation/character/base-
   ]}
 />
 
-export const Template = () => <BaseClass />
+export const Template = () => <BaseClass />;
 
-# jancok latoz
+# Base Class
 
+Sub Component of `<LeftNavigation />`. Displaying `BaseClass` navigation.
+This component is affected by theme toggler in `/components/sections/header`.
 
+Notes:
 
-// export default {
-//   component: BaseClass,
-//   title: 'Components/Sections/LeftNavigation/BaseClass',
-//   parameters: {
-//     docs: {
-//       description: {
-//         component: 'Sub Component of ``<LeftNavigation />``. Displaying ``BaseClass`` navigation.`'
-//         + ' This component affected by theme toggler in ``/components/sections/header``',
-//       },
-//     },
-//   },
-//   decorators: [
-//     (StoryComponent) => (
-//       <nav className='font-titillium mr-0 sm:mr-3 hidden lg:block mb-10'>
-//         <ul className='py-2 px-2 bg-paper-general w-52 transition-general'>
-//           <StoryComponent />
-//         </ul>
-//       </nav>
-//     ),
-//   ],
-// } as Meta
-/**
- * This story is wrapped manually using same html structure with the original component.
- */
+- This component is affected by theme toggler in `/components/sections/header`.
+- This component is wrapped manually using **decorators** in story mode.
+  Because this component doesn't have natural wrapper, so we add it manually for better view. See below.
 
+> ```
+> decorators={[
+>  (StoryComponent) => (
+>    <nav className="font-titillium mr-0 sm:mr-3 hidden lg:block mb-10">
+>      <ul className="py-2 px-2 bg-paper-general w-52 transition-general">
+>        <StoryComponent /> <-- main story
+>     </ul>
+>    </nav>
+>  ),
+> ]}
+> ```
 
-export const BaseClass_ = Template.bind({})
+<Canvas>
+  <Story name="base-class">{Template.bind({})}</Story>
+</Canvas>
