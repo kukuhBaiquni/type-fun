@@ -2,7 +2,7 @@
 
 This folder contain entire component documentation. Please visit [Storybook](https://storybook.js.org/) for more information.
 
-You may notice there is different file extensions `(.mdx|.stories.tsx)`. We using `.mdx` for static component that do not have props. And for component with props we use `.stories.tsx`.
+You may notice there is different file extensions `(.mdx|.stories.tsx)`. We using `.mdx` extension for static component that do not have props. And for component with props we use `.stories.tsx` extension.
 
 ### Getting started
 
@@ -15,12 +15,12 @@ example:
 
 ### Base Class
 
-📓 Author: Kukuh Baiquni | <kukuh.baiquni@gmail.com> 👈 `Write your name as author`
+📓 Author: Kukuh Baiquni | <kukuh.baiquni@gmail.com> 👈 `Write your name as author`<br>
 ⏰ Documented at: Saturday November 27, 2021 - 22:34 👈 `Time when writing documentation`
 
 Sub Component of **`<LeftNavigation />`** for displaying **`BaseClass`** navigation. 👈 `Short description`
 
-File Path: **`/components/sections/left-navigation/character/base-class.tsx`** 👈 `File path in /src`
+File Path: **`/components/sections/left-navigation/character/base-class.tsx`** 👈 `File path in /src`<br>
 Used by: **`const routes: TYPE_ROUTES[]`** ( file path: **`/components/section/left-navigation/routes.tsx`** ) 👈 `Mention component/variable that use this component`
 
 Notes: 👈 `Add notes (optional)`
@@ -37,13 +37,17 @@ Notes: 👈 `Add notes (optional)`
 
 ---
 
-📝 **Changelog** 👈 `Add notes for every component update/edit with the following format`
+📝 **Changelog** 👈 `Add notes for every component update/edit with the following format (the top most recent)`
 
 - Friday, November 26, 2021 - 10:46 📓 Ocit bin Laden | <ocit.asik@gmail.com>
   - Add separator for each list navigation
   - Change component visibility
 - Monday, November 22, 2021 - 14:22 📓 Kukuh Baiquni | <kukuh.baiquni@gmail.com>
   - Remove `mr-0` from `<nav>` class name.
+
+If there is no update, simply write:
+
+- _no recent changes_
 
 ---
 
