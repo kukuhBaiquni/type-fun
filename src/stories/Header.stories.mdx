@@ -1,0 +1,29 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import Header from "components/sections/header";
+
+<Meta component={Header} title="Components/sections/left-navigation/header" />
+
+export const Template = () => <Header />;
+
+# Header
+
+📓 Author: Kukuh Baiquni | <kukuh.baiquni@gmail.com> <br/>
+⏰ Documented at: Monday November 29, 2021 - 13:55
+
+Global `header` component, used for displaying theme toggler, main page navigation & user status.
+
+File Path: **`/components/sections/header.tsx`**. <br/>
+Used by: **Any layout components in `/components/layouts/*`**.
+
+Notes:
+
+- This component contain theme toggler to change appearance of website.
+- This component only used by **`/components/layouts/*`**.
+
+<Canvas>
+  <Story name="header">{Template.bind({})}</Story>
+</Canvas>
+
+### 📝 **Changelog**
+
+- _no recent changes_

@@ -5,7 +5,8 @@ import {
   ChevronDownIcon, MenuIcon, MoonIcon, SunIcon,
 } from '@heroicons/react/solid'
 import useDarkMode from 'hooks/useDarkMode'
-import logo from '../../../public/images/logo.png'
+
+const logo = '/images/logo.png'
 
 const Header = () => {
   const { theme, setTheme } = useDarkMode()

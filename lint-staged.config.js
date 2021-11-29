@@ -3,5 +3,5 @@ module.exports = {
   '**/*.(ts|tsx)': () => 'yarn tsc --noEmit',
 
   // Lint then format TypeScript and JavaScript files
-  '**/*.(ts|tsx|js)': (filenames) => [`yarn run fix ${filenames.join(' ')}`],
+  '**/*.(ts|tsx|js)': (filenames) => [`yarn run lint:fix ${filenames.join(' ')}`],
 }
