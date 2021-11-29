@@ -13,7 +13,7 @@ All settings has been configured when you install this project, all you have to 
 **Static Component (.mdx)**
 example:
 
-### Base Class ### 👈 `Component name`
+### Base Class
 
 📓 Author: Kukuh Baiquni | <kukuh.baiquni@gmail.com> 👈 `Write your name as author`<br>
 ⏰ Documented at: Saturday November 27, 2021 - 22:34 👈 `Time when writing documentation`
