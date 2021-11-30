@@ -12,7 +12,8 @@
     "plugin:react-hooks/recommended",
     "plugin:@typescript-eslint/recommended",
     "next",
-    "next/core-web-vitals"
+    "next/core-web-vitals",
+    "plugin:storybook/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
