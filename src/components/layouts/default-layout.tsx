@@ -16,7 +16,9 @@ const ContributionLayout = (props:Props) => {
   const { children } = props
   return (
     <div className='bg-general transition-all duration-300 min-h-screen'>
-      <Header />
+      <div className='fixed w-full z-30'>
+        <Header />
+      </div>
       <div className='mx-auto max-w-screen-2xl overflow-hidden'>
         <div className='w-full pt-20 sm:pt-24'>
           <div className='flex px-1.5'>

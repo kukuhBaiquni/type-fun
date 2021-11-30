@@ -5,14 +5,15 @@ import {
   ChevronDownIcon, MenuIcon, MoonIcon, SunIcon,
 } from '@heroicons/react/solid'
 import useDarkMode from 'hooks/useDarkMode'
+import logo from '../../../public/images/logo.png'
 
-const logo = '/images/logo.png'
+// const logo = '/images/logo.png'
 
 const Header = () => {
   const { theme, setTheme } = useDarkMode()
 
   return (
-    <header className='fixed z-30 w-full drop-shadow-sm border-b border-gray-300 dark:border-gray-700 bg-general transition-general'>
+    <header className='w-full drop-shadow-sm border-b border-gray-300 dark:border-gray-700 bg-general transition-general'>
       <div className='h-16 sm:h-20 max-w-screen-2xl mx-auto flex items-center justify-between px-4 py-2 '>
         <MenuIcon className='w-7 h-7 text-general sm:hidden' />
         <div className='hidden sm:block'>

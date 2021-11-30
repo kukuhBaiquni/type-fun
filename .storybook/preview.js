@@ -2,16 +2,6 @@ import './globals.css'
 
 import * as Image from "next/image"
 
-export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
-  controls: {
-    matchers: {
-      color: /(background|color)$/i,
-      date: /Date$/,
-    },
-  },
-}
-
 Object.defineProperty(Image, 'default', {
   configurable: true,
   value: (props) => {
@@ -36,3 +26,13 @@ Object.defineProperty(Image, 'default', {
     )
   },
 })
+
+export const parameters = {
+  actions: { argTypesRegex: "^on[A-Z].*" },
+  controls: {
+    matchers: {
+      color: /(background|color)$/i,
+      date: /Date$/,
+    },
+  },
+}
