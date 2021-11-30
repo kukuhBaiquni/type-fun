@@ -1,15 +1,9 @@
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import Header from "components/sections/header";
+import Headers from "components/sections/header";
 
-<Meta
-  component={Header}
-  title="Components/sections/left-navigation/header"
-  decorators={[
-    (StoryComponent) => <div className="max-w-screen-md">{StoryComponent}</div>,
-  ]}
-/>
+<Meta component={Headers} title="Components/sections/left-navigation/header" />
 
-export const Template = () => <Header />;
+export const Template = () => <Headers />;
 
 # Header
 
@@ -25,6 +19,7 @@ Notes:
 
 - This component contain theme toggler to change appearance of website.
 - This component only used by **`/components/layouts/*`**.
+- When you toggle theme, another component affected by theme toggler will change their appearance, based on theme mode.
 
 <Canvas>
   <Story name="header">{Template.bind({})}</Story>
