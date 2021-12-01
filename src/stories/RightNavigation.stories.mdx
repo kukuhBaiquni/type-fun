@@ -1,0 +1,32 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import RightNavigation from "components/sections/right-navigation";
+
+<Meta
+  component={RightNavigation}
+  title="Components/sections/right-navigation"
+/>
+
+export const Template = () => <RightNavigation />;
+
+# Right Navigation
+
+📓 Author: Kukuh Baiquni | <kukuh.baiquni@gmail.com> <br/>
+⏰ Documented at: Saturday December 01, 2021 - 20:17
+
+Component for displaying list of utility navigation link.
+
+File Path: **`/components/sections/right-navigation.tsx`**. <br/>
+Used by: **Any layout components in `/components/layouts/*`**.
+
+Notes:
+
+- This component is affected by theme toggler **`<Header />`** ( file path: **`/components/sections/header`** ).
+- This component only used by **`/components/layouts/*`**.
+
+<Canvas>
+  <Story name="right-navigation">{Template.bind({})}</Story>
+</Canvas>
+
+### 📝 **Changelog**
+
+- _no recent changes_
