@@ -6,9 +6,9 @@ export default {
   title: 'Components/common/alert',
   argTypes: {
     variant: {
-      options: ['info', 'success'],
-      control: { type: 'radio' },
-      description: 'Alert color',
+      options: ['info', 'success', 'warning', 'danger'],
+      control: { type: 'select' },
+      description: 'Alert type',
       defaultValue: {
         summary: 'info',
       },
@@ -43,4 +43,18 @@ export const AlertSuccess = Template.bind({})
 AlertSuccess.args = {
   variant: 'success',
   text: 'Data is successfully submited to the server',
+}
+
+export const AlertWarning = Template.bind({})
+
+AlertWarning.args = {
+  variant: 'warning',
+  text: 'The variable \'mecha\' was created but never used',
+}
+
+export const AlertDanger = Template.bind({})
+
+AlertDanger.args = {
+  variant: 'danger',
+  text: 'The server returned error with status code 502',
 }
