@@ -43,8 +43,52 @@ const ElswordWorld = () => (
           </p>
         </div>
       </section>
+      <section className='grid grid-cols-4 gap-x-3'>
+        <div className='relative h-[200px] flex flex-col'>
+          <Image
+            alt='Elsword World Map'
+            blurDataURL={loader('100%', '100%')}
+            className='object-contain'
+            layout='fill'
+            placeholder='blur'
+            src={elswordWorldMap}
+          />
+        </div>
+        <div className='relative h-[250px]'>
+          <Image
+            alt='Demon Realms Map'
+            blurDataURL={loader('100%', '100%')}
+            className='object-contain'
+            layout='fill'
+            placeholder='blur'
+            src={demonRealmsMap}
+          />
+        </div>
+
+        <div className='relative h-[250px]'>
+          <Image
+            alt='Fluone Island'
+            blurDataURL={loader('100%', '100%')}
+            className='object-contain'
+            layout='fill'
+            placeholder='blur'
+            src={fluoneIsland}
+          />
+        </div>
+      </section>
       <section>
         <h3 className='text-xl font-titillium text-sky-500'>Lurensia</h3>
+        <div className='relative h-[250px] flex justify-start'>
+          <Image
+            alt='Lurensia Island'
+            blurDataURL={loader('100%', '100%')}
+            className='object-contain'
+            layout='fill'
+            placeholder='blur'
+            src={lurensiaIsland}
+          />
+          <p>Lurensia Island</p>
+        </div>
         <div className='mt-2 border-general border-l-0 border-b-0 border-r-0 pt-2'>
           <p>
             The Elrios supercontinent has been divided into two continents, Lurensia being the western one.
