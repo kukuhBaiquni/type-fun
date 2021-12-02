@@ -6,7 +6,7 @@ const Welcome = () => {
   const elswordGame = <a className='text-sky-500 hover:underline' href='https://elwiki.net/w/Elsword_(game)' rel='noreferrer' target='_blank'>Elsword</a>
   return (
     <Fragment>
-      <h2 className='text-3xl font-semibold dark:text-sky-400 text-sky-600 font-titillium'>Welcome to Elfun</h2>
+      <h2 className='text-3xl font-semibold text-sky-500 font-titillium'>Welcome to Elfun</h2>
       <p className='my-2'>
         This website provide information about Elsword, if you don&apos;t know, see {elswordGame}
         . This website is made for personal use only.
