@@ -46,5 +46,13 @@
   .transition-general {
     @apply transition-all duration-300;
   }
+
+  table > thead > tr > th {
+    @apply px-3 py-2 text-left font-titillium text-lg text-general border-general bg-gray-200 dark:bg-gray-700 transition-all duration-300;
+  }
+
+  table > tbody > tr > td {
+    @apply px-3 py-2 min-w-max text-left border-general transition-all duration-300;
+  }
   /* @import "component/scroll"; */
 }
