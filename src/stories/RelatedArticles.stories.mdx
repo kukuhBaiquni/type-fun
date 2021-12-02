@@ -1,0 +1,31 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import RelatedArticles from "components/sections/related-articles";
+
+<Meta
+  component={RelatedArticles}
+  title="Components/sections/related-articles"
+/>
+
+export const Template = () => <RelatedArticles />;
+
+# Related Articles
+
+📓 Author: Kukuh Baiquni | <kukuh.baiquni@gmail.com> <br/>
+⏰ Documented at: Thursday December 02, 2021 - 14:43
+
+Section of list articles related to `'Elsword'`
+
+File Path: **`/components/sections/related-articles.tsx`**. <br/>
+Used by: **`/pages/index.tsx*`**.
+
+Notes:
+
+- This component only used by **`/pages/index.tsx`**.
+
+<Canvas>
+  <Story name="related-articles">{Template.bind({})}</Story>
+</Canvas>
+
+### 📝 **Changelog**
+
+- _no recent changes_
