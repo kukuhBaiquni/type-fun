@@ -5,6 +5,8 @@ import React from 'react'
 import Alert from 'components/common/alert'
 import Welcome from 'components/sections/welcome'
 import RelatedArticles from 'components/sections/related-articles'
+import Contribution from 'components/sections/contribution'
+import NewsAndUpdates from 'components/sections/news-and-updates'
 
 const alertContent = (
   <p className='ml-3'>
@@ -25,8 +27,8 @@ const Home = () => (
       <section className='px-2 mb-10'>
         <Welcome />
         <RelatedArticles />
-        {/* <Contribution />
-        <NewsAndUpdate /> */}
+        <NewsAndUpdates />
+        <Contribution />
       </section>
     </main>
   </React.Fragment>
