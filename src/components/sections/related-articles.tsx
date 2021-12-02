@@ -3,24 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import loader from 'components/common/image-loader'
 import clsx from 'clsx'
-
-const articles = [{
-  title: 'Elsword World',
-  img: 'https://firebasestorage.googleapis.com/v0/b/elfun-web-app.appspot.com/o/images%2Farticle%2Felsword-world.jpg?alt=media&token=b1020221-4b36-4fe1-a937-314586d8f6a3',
-  path: '/related-articles/elsword-world',
-}, {
-  title: 'Non Playable Character (NPC)',
-  img: 'https://firebasestorage.googleapis.com/v0/b/elfun-web-app.appspot.com/o/images%2Farticle%2Fnpc.jpg?alt=media&token=e82c9e7c-18c3-443e-85e8-4fddc8622f82',
-  path: '/related-articles/npc',
-}, {
-  title: 'Item Mall & Ice Burner',
-  img: 'https://firebasestorage.googleapis.com/v0/b/elfun-web-app.appspot.com/o/images%2Farticle%2Fitem-mall.jpg?alt=media&token=a5ab4a67-64ac-43fb-a1d3-a0d74bd6df02',
-  path: '/related-articles/item-mall',
-}, {
-  title: 'Story',
-  img: 'https://firebasestorage.googleapis.com/v0/b/elfun-web-app.appspot.com/o/images%2Farticle%2Fstory.jpg?alt=media&token=73c48d9a-8ce5-4885-902e-131a5b647c18',
-  path: '/related-articles/story',
-}]
+import articles from 'constant/articles'
 
 const RelatedArticles = () => (
   <div className='mt-8'>
