@@ -19,7 +19,7 @@ const DUNGEONS = [
   },
   {
     name: 'Shadow Forest',
-    img: 'https://firebasestorage.googleapis.com/v0/b/elfun-web-app.appspot.com/o/images%2Fdungeon%2Fshadow-forest.png?alt=media&token=8380b498-0a23-4619-a15f-e11c02026f23',
+    img: 'https://firebasestorage.googleapis.com/v0/b/elfun-web-app.appspot.com/o/images%2Fdungeon%2Fshadow-forest-old.png?alt=media&token=1a0b599f-a242-489a-ae6b-61e52d95270a',
     townId: 1,
     dungeonId: 0,
   },
