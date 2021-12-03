@@ -29,14 +29,14 @@ const routes: TYPE_ROUTES[] = [{
   path: '',
   childData: true,
   childRenderer: <BaseClass />,
-  collapsed: true,
+  collapsed: false,
   h: 'h-[480px]',
 }, {
   name: 'Towns',
   path: '',
   childData: true,
   childRenderer: <Town />,
-  collapsed: true,
+  collapsed: false,
   h: 'h-[540px]',
 }, {
   name: 'Equipments',

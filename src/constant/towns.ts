@@ -6,6 +6,8 @@ export type TYPE_TOWN = {
   hoverTextColor?: string
   hoverBgColor: string
   townId: number
+  description: string
+  continent: string
 }
 
 const TOWNS = [
@@ -16,6 +18,8 @@ const TOWNS = [
     textColor: 'text-ruben dark:text-ruben-dark',
     hoverBgColor: 'hover:bg-ruben',
     townId: 0,
+    continent: 'lurensia',
+    description: 'Ruben is a small village region located at the western portion of Lurensia. This region is characterized by its forests and marshes, but is most notably known for housing the largest El in all of Elrios which taken on the form of a large tree known as the Tree of El.',
   },
   {
     name: 'Elder',
@@ -24,6 +28,8 @@ const TOWNS = [
     textColor: 'text-elder dark:text-elder-dark',
     hoverBgColor: 'hover:bg-elder',
     townId: 1,
+    continent: 'lurensia',
+    description: 'Elder is a bustling city state ruled under the local lord Wally. This town is a very bustling and popular hub for trade and commerce in Elrios bringing much wealth to the region. The area is close to a relatively small demonic forest. It is also home to a region gang of bandits lead by Banthus who have made the local caves their hiding spot. Most notably is the large castle which houses the land\'s local lord and his militia.',
   },
   {
     name: 'Bethma',
@@ -32,6 +38,8 @@ const TOWNS = [
     textColor: 'text-bethma dark:text-bethma-dark',
     hoverBgColor: 'hover:bg-bethma',
     townId: 2,
+    continent: 'lurensia',
+    description: 'Bethma is a hot canyon region characterized by its distinctive orange stone mountains and canyons. The region is the home of the local Lizardman Tribe who have settled around and near the canyon\'s iconic Bethma Lake. In ancient history, the region used to be the home of dragons that have since gone extinct. The region is rich in minerals making is a popular destination for mining operations for Magic Stones and other jewels.',
   },
   {
     name: 'Altera',
@@ -40,6 +48,8 @@ const TOWNS = [
     textColor: 'text-altera dark:text-altera-dark',
     hoverBgColor: 'hover:bg-altera',
     townId: 3,
+    continent: 'lurensia',
+    description: 'Altera is a floating island off the coast of Lurensia. Once city built by the Nasods and a place of command during the ancient Nasod War, the Nasods have long since fell into ruin however the island still suspends itself above the sea. Having become a graveyard of a war long past, it has become the home of the Pongo who\'ve become very knowledgeable of the technology that has been lost elsewhere. Due to the reawakening of King Nasod, the Nasod inhabitant was progressively returned to patrolling the island and have also gained the assistance of a Mercenary group known as The Black Crow. While the upper plate has become overgrown by nature, the underside of the island lies technological core of the island.',
   },
   {
     name: 'Feita',
@@ -48,6 +58,8 @@ const TOWNS = [
     textColor: 'text-feita dark:text-feita-dark',
     hoverBgColor: 'hover:bg-feita',
     townId: 4,
+    continent: 'lurensia',
+    description: 'Feita is an ancient temple grounds surrounded by the large Dark Forest Nisha Labyrinth. Once a shrine dedicated to the El Lady, the temple has been abandoned since the El Explosion. The Dark Forests surrounding most of the area is filled with demonic energy and is known for leading travelers astray. Using the El Energy within the temple, the demons have launched a small scale invasion of the temple under the command of Berthe. Velder\'s Feita Knights was managed to contain the demon threat within the temple but the invaders have gone and corrupted the powers within.',
   },
   {
     name: 'Velder',
@@ -56,6 +68,8 @@ const TOWNS = [
     textColor: 'text-velder dark:text-velder-dark',
     hoverBgColor: 'hover:bg-velder',
     townId: 5,
+    continent: 'lurensia',
+    description: 'Velder is the largest city in Lurensia and the capital of the Velder Kingdom. A massive city which dominates Lurensia\'s eastern coast and the home base for the revered Red Knights. The Velder Kingdom dates back as far as the Nasod War, however the modern Velder rose to major prominence after the El Explosion where the current city was founded around the Earth El guided by the Earth Master Gaia and the first Earth Priestess Verdel. Lurensia\'s most influential state, their insignia is branded all throughout the continent and their government possess significant authority. The walled city itself is divided into the residential and commercial district at its forefront while the administrative and palace lie across a large river. Soon following the demon invasions of Feita and Hamel, Velder was attacks by demons who had managed to open a portal from within the Earth El in the city\'s palace.',
   },
   {
     name: 'Hamel',
@@ -64,6 +78,8 @@ const TOWNS = [
     textColor: 'text-hamel dark:text-hamel-dark',
     hoverBgColor: 'hover:bg-hamel',
     townId: 6,
+    continent: 'fluone',
+    description: 'Hamel is the capital of the greater Resiam region of Southern Fluone. An ancient city founded after the El Explosion by Denif where the Water El was. The grand city itself is surrounded by the residential Resiam area which connects the capital to the waterways which control the flow of water through the region. In the mountains behind the city lies the Water Temple which is hidden and largely inaccessible through normal means, where the Water El resides. Due to the demon invasion lead by Ran, the Ancient Waterways had gone into disarray and much of the residential districts have become flooded.',
   },
   {
     name: 'Sander',
@@ -73,6 +89,8 @@ const TOWNS = [
     hoverTextColor: 'hover:text-gray-600 dark:hover:text-gray-600',
     hoverBgColor: 'hover:bg-sander',
     townId: 7,
+    continent: 'fluone',
+    description: 'Sander is a prominent and rich trading hub in Fluone, with its entire economy being largely based on it. Located deep in the deserts of Southern Fluone, it bridges the prominent cities of Hamel to its west and Lanox to its east. The surrounding regions are home to a variety of different tribes and species. The hapries dwell in the spires of Garpai Rock while the Trock live in the subterranean tunnels. The Caluso Tribe in particular being the protectors of the Wind El in their floating tribal village. Notably the desert region is home to a dormant Holy Beast, Behemoth who had been sealed within the Parugo Mountains.',
   },
   {
     name: 'Lanox',
@@ -81,6 +99,8 @@ const TOWNS = [
     textColor: 'text-lanox dark:text-lanox-dark',
     hoverBgColor: 'hover:bg-lanox',
     townId: 8,
+    continent: 'fluone',
+    description: 'Lanox is a well established industrialized Victorian Era city located at the base of a volcano. The city itself is notorious for its organized crime. Considered the edge of the Elrios continent it is the most eastern area of the world. Outside the city are lands which are largely burnt and scarred due to the high presence of Fire Energy from the Fire El which resides in the Fire Temple at the volcano\'s peak. The high volcanic energy and deposits have also made the region known for its impeccable blacksmithing community run by the Dwarves in the local mountains and its geyser hotsprings which the mermaids call their domain.',
   },
   {
     name: 'Atlas',
@@ -89,6 +109,8 @@ const TOWNS = [
     textColor: 'text-atlas dark:text-atlas-dark',
     hoverBgColor: 'hover:bg-atlas',
     townId: 9,
+    continent: 'other location',
+    description: 'Atlas Station is part of the Elysion teritority. The first place El Search party travel to other dimensions',
   },
   {
     name: 'Elysion',
@@ -97,6 +119,8 @@ const TOWNS = [
     textColor: 'text-elysion dark:text-elysion-dark',
     hoverBgColor: 'hover:bg-elysion',
     townId: 10,
+    continent: 'other location',
+    description: 'A completely separate dimension outside of Elrios discovered by Debrians when they sought to build their own city beyond the goddess. Despite being separate from Elrios the El\'s energy is still present in the dimension\'s Diceon Ore. The area is divided into two separate regions, the Atlas Territory which comprises of a naturally occurring island rich in Diceon Ore which is being mined through the industrialized operation within the island. Above Atlas is the Elysion Territory which is a completely artificial city floating above which houses Adrian\'s Palace at its crown and a large fortress structure on its underside.',
   },
   {
     name: 'Elrianode',
@@ -105,6 +129,8 @@ const TOWNS = [
     textColor: 'text-elrianode dark:text-elrianode-dark',
     hoverBgColor: 'hover:bg-elrianode',
     townId: 11,
+    continent: 'fluone',
+    description: 'Elrianode is an ancient city which was the capital of the Great Elrian Empire before its collapse due to the El Explosion. Elrianode was the place where the original Large El had fallen and became the heart of Elrios\'s most powerful kingdom. A prominent location for many historical events, large metropolis lived through the Nasod War and remained a place of prominence till the El Explosion, after which it was sealed away by the Water Master Denif. The current layout of the city has the El Tower at its center where the Large El stands, with many upon many sectors stretching out from it including the primary city and sanctuaries of importance.',
   },
   {
     name: 'Varnimyr',
@@ -113,6 +139,8 @@ const TOWNS = [
     textColor: 'dark:text-gray-400 text-varnimyr',
     hoverBgColor: 'hover:bg-varnimyr',
     townId: 12,
+    continent: 'demon realms',
+    description: 'Varnimyr is a region located at the most northwestern point of the Demon Realm, considered the edge of the world. The region is houses a lush forest, Varnitas Eldimyr, which the Dark Elves have made their home. To its east used to reside a vibrant sanctum for the spirit however due to the intervention of Rosso\'s out of control demon self, the land has largely been reduced to a scorched wasteland with Rosso\'s own prison tower at its heart. The mountains bordering the region are also a rich mine of Mystic Stones.',
   },
   {
     name: 'Rigomor',
@@ -121,6 +149,8 @@ const TOWNS = [
     textColor: 'text-rigomor dark:text-rigomor-dark',
     hoverBgColor: 'hover:bg-rigomor',
     townId: 13,
+    continent: 'demon realms',
+    description: 'Rigomor is a wasteland that exists in a air pocked on the sea floor off the coast of Varnimyr. While noted for being quite beautiful, the land however is a cold and barren wasteland strapped for resources. It has since become the refuge for the Nous people after they were betrayed by the Garen and with it, they brought their technology down to the sea floor where it aids in their survival.',
   },
   {
     name: 'Master Road',
@@ -129,6 +159,8 @@ const TOWNS = [
     textColor: 'text-master-road dark:text-master-road-dark',
     hoverBgColor: 'hover:bg-master-road',
     townId: 14,
+    continent: 'other location',
+    description: 'Master Road Dungeon Class Advancement',
   },
   {
     name: 'Pruinaum',
@@ -137,6 +169,8 @@ const TOWNS = [
     textColor: 'text-pruinaum dark:text-pruinaum-dark',
     hoverBgColor: 'hover:bg-pruinaum',
     townId: 15,
+    continent: 'demon realms',
+    description: 'Pruinaum the frigid northern region of the Demon Realm and the domain of the Nous and Garen races. The land falls under the jurisdiction of the the White-Ghost Army and its former leader, the White-Ghost King, Aegirp. A snowy tundra scarce on resources. It is a difficult place to survive in, however due to the White-Ghost Army\'s prior ventures in Elrios, they\'ve managed to thrive in this cold wasteland, adopting many customs and technologies from the Northern Fluone.',
   },
   {
     name: 'Pruinaum Outskirt',
@@ -145,6 +179,8 @@ const TOWNS = [
     textColor: 'text-pruinaum-outskirt dark:text-pruinaum-outskirt-dark',
     hoverBgColor: 'hover:bg-pruinaum-outskirt',
     townId: 16,
+    continent: 'demon realms',
+    description: 'Further deep from Pruinaum Teritority',
   },
 ]
 
