@@ -2,12 +2,12 @@ import {
   InformationCircleIcon, CheckCircleIcon, ExclamationCircleIcon, XCircleIcon,
 } from '@heroicons/react/solid'
 
-export interface TYPE_ALERT {
+export interface ALERT_PROPS {
   variant: 'success' | 'info' | 'warning' | 'danger'
   text: string | React.ReactElement
 }
 
-const Alert = ({ variant, text }:TYPE_ALERT) => {
+const Alert = ({ variant, text }: ALERT_PROPS) => {
   const AlertList = {
     success: {
       textColor: 'text-green-700',

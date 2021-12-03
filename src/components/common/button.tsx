@@ -2,7 +2,7 @@
 import { ReactElement } from 'react'
 import clsx from 'clsx'
 
-export interface TYPE_BUTTON {
+export interface BUTTON_PROPS {
   type?: 'button' | 'submit'
   label?: string
   onClick?: () => void
@@ -13,7 +13,7 @@ export interface TYPE_BUTTON {
   variant?: 'primary-solid' | 'primary-outlined' | 'danger-solid' | 'danger-outlined' | 'submit-solid' | 'submit-outlined'
 }
 
-const Button = (props:TYPE_BUTTON) => {
+const Button = (props: BUTTON_PROPS) => {
   const {
     type = 'button',
     label = '',
