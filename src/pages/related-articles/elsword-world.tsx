@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Layout from 'components/layouts/default-layout'
 import React from 'react'
 import Image from 'next/image'
-import articles, {
+import ARTICLES, {
   elswordWorldMap, demonRealmsMap, lurensiaIsland, fluoneIsland,
 } from 'constant/articles'
 import loader from 'components/common/image-loader'
@@ -12,7 +12,7 @@ import CONTINENT from 'constant/continent'
 import DUNGEONS from 'constant/dungeons'
 import clsx from 'clsx'
 
-const info = articles[0]
+const info = ARTICLES[0]
 const assetList = [
   { img: elswordWorldMap, name: 'Elsword World' },
   { img: demonRealmsMap, name: 'Demon Realms' },

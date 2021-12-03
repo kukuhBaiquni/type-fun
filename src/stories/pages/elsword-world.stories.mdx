@@ -1,0 +1,213 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import ElswordWorld from "pages/related-articles/elsword-world";
+
+<Meta component={ElswordWorld} title="Pages/related-articles/elsword-world" />
+
+export const Template = () => <ElswordWorld />;
+
+# Elsword World
+
+📓 Author: Kukuh Baiquni | <kukuh.baiquni@gmail.com> <br/>
+⏰ Documented at: Friday December 03, 2021 - 16:48
+
+This page contain information about continent
+
+File Path: **`/pages/related-articles/elsword-world.tsx`**. <br/>
+Used by: **This file is entry point**.
+
+Notes:
+
+- This page using **`ARTICLES, TOWNS, DUNGEONS`** from **`/constant`**
+
+You will encountered with this code in this page
+
+```jsx
+// What's this code do?
+const lurensiaTown = CONTINENT.teritory
+  .filter((item) => item.name === "Lurensia")
+  .map((item) => ({
+    ...item,
+    towns: TOWNS.filter((town) => town.continent === "lurensia").map(
+      (town) => ({
+        ...town,
+        dungeons: DUNGEONS.filter((dungeon) => dungeon.townId === town.townId),
+      })
+    ),
+  }));
+```
+
+### Explanation
+
+Let say we have 3 static data: `CONTINENT, TOWNS, DUNGEONS`. We want to merge them, to reduce lines of code. <br/>
+First this is `CONTINENT` look like:
+
+```jsx
+// constant/continent.ts
+
+const CONTINENT = {
+  name: "Elsword World",
+  description:
+    "The Elsword World is the fantasy world created by KOG Studios, in which is depicted the story of Elsword.  According to the Lore of Elsword, the world of Elrios was once a desolate with life being scarce.  That all changed when the El was bestowed upon the land and life began to flourish.  The all mighty Ellian Kingdom was born surrounding the El until the day of the El Explosion, scattering the El all across Elrios giving birth to many villages and kingdoms.  The Elsword world consists of a major supercontinent called Elrios.  This supercontinent split into two continents, Lurensia and Fluone, due to the explosion of the El in the Festival of Harmony.",
+  teritory: [
+    {
+      name: "Lurensia",
+      description:
+        "The Elrios supercontinent has been divided into two continents, Lurensia being the western one. Due to the El, Lurensia housed a fertile and prosperous environment and at the same time, filled it with the supreme energy of green earth.",
+    },
+    {
+      name: "Fluone",
+      description:
+        "The Elrios continent exploded whilst in chaos, causing the colossal mountain to sink within the sea. After several months of pandemonium, the Elrios continent was eventually split into two separate continents.  From the Velder Kingdom in Lurensia, one can pass through the Velder Marina to the eastern Elrios Continent called Fluone.",
+    },
+    {
+      name: "Demon Realms",
+      description:
+        "The opposite of the physical world that Elrios exists in.  Created by Elia during the creation of the two worlds, the Demon Realm became inhabited with creatures vastly different than those who exist in the physical world such as Glitters, Shadows, Incubi, Succubi, among many others.  This is where Lu originates from as well as many demon figures invading Elrios.",
+    },
+    {
+      name: "Other Location",
+      description: "",
+    },
+  ],
+};
+```
+
+Inside each element of `CONTINENT.teritory` we want to add `towns`.<br/>
+We match `continent` to make sure the `TOWNS` is in the right `CONTINENT`
+
+```jsx
+// pages/related-articles/elsword-world.tsx (line: 25)
+TOWNS.filter((town) => town.continent === "lurensia"); // "lurensia" | "fluone" | "demon realms" | "other location"
+```
+
+So it will look like this:
+
+```jsx
+const lurensiaTown = {
+  name: "Lurensia",
+  description:
+    "The Elrios supercontinent has been divided into two continents, Lurensia being the western one. Due to the El, Lurensia housed a fertile and prosperous environment and at the same time, filled it with the supreme energy of green earth.",
+  towns: [
+    {
+      name: "Ruben",
+      img: "https://firebasestorage.googleapis.com/v0/b/elfun-web-app.appspot.com/o/images%2Ftown%2Fruben.png?alt=media&token=d3b2870f-4dc0-49fc-8e5d-640284cd72b9",
+      bgColor: "bg-ruben",
+      textColor: "text-ruben dark:text-ruben-dark",
+      hoverBgColor: "hover:bg-ruben",
+      townId: 0,
+      continent: "lurensia",
+      description:
+        "Ruben is a small village region located at the western portion of Lurensia. This region is characterized by its forests and marshes, but is most notably known for housing the largest El in all of Elrios which taken on the form of a large tree known as the Tree of El.",
+    },
+    ...rest,
+  ],
+};
+```
+
+And in each `towns` element we want to add `dungeons`. <br/>
+Then we match `townId` to make sure the `DUNGEONS` is in the right `TOWNS`
+
+```jsx
+// pages/related-articles/elsword-world.tsx (line: 27)
+DUNGEONS.filter((dungeon) => dungeon.townId === town.townId); // townId is the number between 0 - 16
+```
+
+And now the data structure now look like this:
+
+```jsx
+// And we do the same thing for another CONTINENT (fluoneTown, demonRealmsTown, otherLocationTown)
+const lurensiaTown = {
+  name: "Lurensia",
+  description:
+    "The Elrios supercontinent has been divided into two continents, Lurensia being the western one. Due to the El, Lurensia housed a fertile and prosperous environment and at the same time, filled it with the supreme energy of green earth.",
+  towns: [
+    {
+      name: "Ruben",
+      img: "https://firebasestorage.googleapis.com/v0/b/elfun-web-app.appspot.com/o/images%2Ftown%2Fruben.png?alt=media&token=d3b2870f-4dc0-49fc-8e5d-640284cd72b9",
+      bgColor: "bg-ruben",
+      textColor: "text-ruben dark:text-ruben-dark",
+      hoverBgColor: "hover:bg-ruben",
+      townId: 0,
+      continent: "lurensia",
+      description:
+        "Ruben is a small village region located at the western portion of Lurensia. This region is characterized by its forests and marshes, but is most notably known for housing the largest El in all of Elrios which taken on the form of a large tree known as the Tree of El.",
+      dungeons: [
+        {
+          name: "Tree of Life",
+          img: "https://firebasestorage.googleapis.com/v0/b/elfun-web-app.appspot.com/o/images%2Fdungeon%2Ftree-of-life.png?alt=media&token=6e494ab9-7bff-45ba-961c-47183bb440c3",
+          townId: 0,
+          dungeonId: 0,
+        },
+        ...restOfMatchedDungeon,
+      ],
+    },
+    ...restOfMatchedTown,
+  ],
+};
+```
+
+For the final step we wrap the final result of merging.
+
+```jsx
+const continents = [
+  lurensiaTown,
+  fluoneTown,
+  demonRealmsTown,
+  otherLocationTown,
+];
+```
+
+Last step, just iterate through `continents` variable
+
+```jsx
+{
+  continents.map((continent) =>
+    continent.map((item) => (
+      <section key={item.name}>
+        <h3 className="text-xl font-titillium text-sky-500">{item.name}</h3>
+        <div className="mt-2 mb-4 border-general border-l-0 border-b-0 border-r-0 pt-2">
+          <p>{item.description}</p>
+        </div>
+        <div className="p-2 bg-paper-general grid grid-cols-1 gap-y-5">
+          {item.towns.map((town, index) => (
+            <div key={index}>
+              <h3 className={clsx("font-titillium", town.textColor)}>
+                {town.name}
+              </h3>
+              <p>{town.description}</p>
+              <div className="flex items-center flex-wrap gap-2 mt-2">
+                {town.dungeons.map((dungeon) => (
+                  <div
+                    className={clsx(
+                      town.bgColor,
+                      "py-1 px-2.5 font-titillium rounded"
+                    )}
+                    key={dungeon.name}
+                  >
+                    <p
+                      className={clsx(
+                        "text-sm ",
+                        town.hoverTextColor ? "text-gray-700" : "text-white"
+                      )}
+                    >
+                      {dungeon.name}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    ))
+  );
+}
+```
+
+<Canvas>
+  <Story name="elsword-world">{Template.bind({})}</Story>
+</Canvas>
+
+### 📝 **Changelog**
+
+- _no recent changes_
