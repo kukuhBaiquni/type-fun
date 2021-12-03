@@ -1,4 +1,4 @@
-const articles = [{
+const ARTICLES = [{
   title: 'Elsword World',
   img: 'https://firebasestorage.googleapis.com/v0/b/elfun-web-app.appspot.com/o/images%2Farticle%2Felsword-world.jpg?alt=media&token=b1020221-4b36-4fe1-a937-314586d8f6a3',
   path: '/related-articles/elsword-world',
@@ -21,4 +21,4 @@ export const demonRealmsMap = 'https://firebasestorage.googleapis.com/v0/b/elfun
 export const lurensiaIsland = 'https://firebasestorage.googleapis.com/v0/b/elfun-web-app.appspot.com/o/images%2Farticle%2Fassets%2Flurensia.png?alt=media&token=0fa87cd9-1d72-49f2-b1ff-cc3d107c92ce'
 export const fluoneIsland = 'https://firebasestorage.googleapis.com/v0/b/elfun-web-app.appspot.com/o/images%2Farticle%2Fassets%2Ffluone.png?alt=media&token=b57d3342-0277-4b6a-8ccb-16773844eb65'
 
-export default articles
+export default ARTICLES

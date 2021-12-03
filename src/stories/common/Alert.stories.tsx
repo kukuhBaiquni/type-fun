@@ -14,7 +14,7 @@ export default {
       },
     },
     text: {
-      description: 'Text inside alert',
+      description: 'Text inside alert. You can pass `React Element` as value',
       defaultValue: {
         summary: '-',
       },

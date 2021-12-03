@@ -35,17 +35,17 @@ Notes:
 - This component is wrapped manually using **[Decorators](https://storybook.js.org/docs/react/writing-stories/decorators)** in story mode.<br/>
   Because this component doesn't have natural wrapper, so we add it manually based on original component. See below.
 
-> ```tsx
-> decorators={[
->  (StoryComponent) => (
->    <nav className="font-titillium sm:mr-3 hidden lg:block mb-10">
->      <ul className="py-2 px-2 bg-paper-general w-52 transition-general">
->        <StoryComponent /> <-- main story
->     </ul>
->    </nav>
->  ),
-> ]}
-> ```
+```jsx
+decorators={[
+ (StoryComponent) => (
+   <nav className="font-titillium sm:mr-3 hidden lg:block mb-10">
+    <ul className="py-2 px-2 bg-paper-general w-52 transition-general">
+       <StoryComponent /> <-- main story
+    </ul>
+   </nav>
+ ),
+]}
+```
 
 <Canvas>
   <Story name="base-class">{Template.bind({})}</Story>
