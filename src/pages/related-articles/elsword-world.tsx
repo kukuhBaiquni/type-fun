@@ -7,6 +7,8 @@ import articles, {
   elswordWorldMap, demonRealmsMap, lurensiaIsland, fluoneIsland,
 } from 'constant/articles'
 import loader from 'components/common/image-loader'
+import TOWNS from 'constant/towns'
+import clsx from 'clsx'
 
 const info = articles[0]
 const assetList = [
@@ -15,6 +17,11 @@ const assetList = [
   { img: lurensiaIsland, name: 'Lurensia Island' },
   { img: fluoneIsland, name: 'Fluone Island' },
 ]
+
+const lurensiaTown = TOWNS.filter((item) => item.continent === 'lurensia')
+const fluoneTown = TOWNS.filter((item) => item.continent === 'fluone')
+const demonRealmsTown = TOWNS.filter((item) => item.continent === 'demon realms')
+const otherLocationTown = TOWNS.filter((item) => item.continent === 'other location')
 
 const ElswordWorld = () => (
   <React.Fragment>
@@ -50,6 +57,72 @@ const ElswordWorld = () => (
           </p>
         </div>
       </section>
+      <section>
+        <h3 className='text-xl font-titillium text-sky-500'>Lurensia</h3>
+        <div className='mt-2 mb-4 border-general border-l-0 border-b-0 border-r-0 pt-2'>
+          <p>
+            The Elrios supercontinent has been divided into two continents, Lurensia being the western one.
+            Due to the El, Lurensia housed a fertile and prosperous environment and at the same time, filled it with the supreme energy of green earth.
+          </p>
+        </div>
+        <div className='p-2 bg-paper-general grid grid-cols-1 gap-y-5'>
+          {lurensiaTown.map((item, index) => (
+            <div key={index}>
+              <h3 className={clsx('font-titillium', item.textColor)}>{item.name}</h3>
+              <p>{item.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+      <section>
+        <h3 className='text-xl font-titillium text-sky-500'>Fluone</h3>
+        <div className='mt-2 mb-4 border-general border-l-0 border-b-0 border-r-0 pt-2'>
+          <p>
+            The Elrios continent exploded whilst in chaos, causing the colossal mountain to sink within the sea.
+            After several months of pandemonium, the Elrios continent was eventually split into two separate continents.
+            From the Velder Kingdom in Lurensia, one can pass through the Velder Marina to the eastern Elrios Continent called Fluone.
+          </p>
+        </div>
+        <div className='p-2 bg-paper-general grid grid-cols-1 gap-y-5'>
+          {fluoneTown.map((item, index) => (
+            <div key={index}>
+              <h3 className={clsx('font-titillium', item.textColor)}>{item.name}</h3>
+              <p>{item.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+      <section>
+        <h3 className='text-xl font-titillium text-sky-500'>Demon Realms</h3>
+        <div className='mt-2 mb-4 border-general border-l-0 border-b-0 border-r-0 pt-2'>
+          <p>
+            The opposite of the physical world that Elrios exists in.
+            Created by Elia during the creation of the two worlds,
+            the Demon Realm became inhabited with creatures vastly different than those who exist in the physical world such as Glitters, Shadows, Incubi, Succubi, among many others.
+            This is where Lu originates from as well as many demon figures invading Elrios.
+          </p>
+        </div>
+        <div className='p-2 bg-paper-general grid grid-cols-1 gap-y-5'>
+          {demonRealmsTown.map((item, index) => (
+            <div key={index}>
+              <h3 className={clsx('font-titillium', item.textColor)}>{item.name}</h3>
+              <p>{item.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+      <section>
+        <h3 className='text-xl font-titillium text-sky-500'>Other Locations</h3>
+        <div className='mt-2 mb-4 border-general border-l-0 border-b-0 border-r-0 pt-2' />
+        <div className='p-2 bg-paper-general grid grid-cols-1 gap-y-5'>
+          {otherLocationTown.map((item, index) => (
+            <div key={index}>
+              <h3 className={clsx('font-titillium', item.textColor)}>{item.name}</h3>
+              <p>{item.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
       <section className='grid grid-cols-4 gap-2'>
         {assetList.map((item, index) => (
           <div className='relative h-[200px]' key={index}>
@@ -65,15 +138,6 @@ const ElswordWorld = () => (
             <p className='text-sm font-titillium'>{item.name}</p>
           </div>
         ))}
-      </section>
-      <section>
-        <h3 className='text-xl font-titillium text-sky-500'>Lurensia</h3>
-        <div className='mt-2 border-general border-l-0 border-b-0 border-r-0 pt-2'>
-          <p>
-            The Elrios supercontinent has been divided into two continents, Lurensia being the western one.
-            Due to the El, Lurensia housed a fertile and prosperous environment and at the same time, filled it with the supreme energy of green earth.
-          </p>
-        </div>
       </section>
     </main>
   </React.Fragment>
