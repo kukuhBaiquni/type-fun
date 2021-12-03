@@ -1,6 +1,6 @@
 import { TrashIcon } from '@heroicons/react/solid'
 import { Meta, Story } from '@storybook/react'
-import Button, { TYPE_BUTTON } from 'components/common/button'
+import Button, { BUTTON_PROPS } from 'components/common/button'
 
 export default {
   component: Button,
@@ -62,7 +62,7 @@ export default {
   },
 } as Meta
 
-const Template: Story<TYPE_BUTTON> = (args) => <Button {...args} />
+const Template: Story<BUTTON_PROPS> = (args) => <Button {...args} />
 
 export const ButtonMain = Template.bind({})
 

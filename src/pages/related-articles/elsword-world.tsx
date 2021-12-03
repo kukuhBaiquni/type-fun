@@ -89,7 +89,16 @@ const ElswordWorld = () => (
           <div className='p-2 bg-paper-general grid grid-cols-1 gap-y-5'>
             {item.towns.map((town, index) => (
               <div key={index}>
-                <h3 className={clsx('font-titillium', town.textColor)}>{town.name}</h3>
+                <div className='flex gap-x-2'>
+                  <Image
+                    alt={town.name}
+                    className='object-cover'
+                    height={15}
+                    src={town.img}
+                    width={24}
+                  />
+                  <h3 className={clsx('font-titillium', town.textColor)}>{town.name}</h3>
+                </div>
                 <p>{town.description}</p>
                 <div className='flex items-center flex-wrap gap-2 mt-2'>
                   {town.dungeons.map((dungeon) => (

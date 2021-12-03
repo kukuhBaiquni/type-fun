@@ -552,13 +552,13 @@ const DUNGEONS = [
     dungeonId: 0,
   },
   {
-    name: 'Plegas\' Reflection',
+    name: 'Plegas\'s Reflection',
     img: 'https://firebasestorage.googleapis.com/v0/b/elfun-web-app.appspot.com/o/images%2Fdungeon%2Fplegas-reflection.png?alt=media&token=07dba3e7-158e-4d31-abfe-b6d21ea59461',
     townId: 16,
     dungeonId: 1,
   },
   {
-    name: 'Plegas\' Labyrinth',
+    name: 'Plegas\'s Labyrinth',
     img: 'https://firebasestorage.googleapis.com/v0/b/elfun-web-app.appspot.com/o/images%2Fdungeon%2Fplegas-labyrinth.png?alt=media&token=c5fb27d7-af12-44d9-84e5-d03f512775e4',
     townId: 16,
     dungeonId: 2,

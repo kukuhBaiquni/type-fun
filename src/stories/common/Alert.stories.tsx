@@ -1,5 +1,5 @@
 import { Meta, Story } from '@storybook/react'
-import Alert, { TYPE_ALERT } from 'components/common/alert'
+import Alert, { ALERT_PROPS } from 'components/common/alert'
 
 export default {
   component: Alert,
@@ -29,7 +29,7 @@ export default {
   },
 } as Meta
 
-const Template: Story<TYPE_ALERT> = (args) => <Alert {...args} />
+const Template: Story<ALERT_PROPS> = (args) => <Alert {...args} />
 
 export const AlertMain = Template.bind({})
 
