@@ -3,15 +3,15 @@ import React, { useState, useEffect } from 'react'
 import clsx from 'clsx'
 import { baseClass, CHARACTER_ } from 'constant/characters'
 import Modal from 'components/common/modal'
+import ClassTree from './class-tree'
 
 interface CHARACTER_SELECTOR_PROPS{
   title: string
   subtitle: string
-  description?: string
 }
 
 const CharacterSelector = (props: CHARACTER_SELECTOR_PROPS) => {
-  const { title, subtitle, description } = props
+  const { title, subtitle } = props
   const [isVisible, setIsVisible] = useState<boolean>(false)
   const [data, setData] = useState<CHARACTER_ | null>(null)
   const [selectedCharacter, setSelectedCharacter] = useState<CHARACTER_ | null>({} as CHARACTER_)
@@ -24,6 +24,7 @@ const CharacterSelector = (props: CHARACTER_SELECTOR_PROPS) => {
   useEffect(() => {
     if (isVisible) setSelectedCharacter(null)
   }, [isVisible])
+
   return (
     <React.Fragment>
       <h2 className='text-3xl font-semibold dark:text-sky-400 text-sky-600 font-titillium'>
@@ -54,7 +55,7 @@ const CharacterSelector = (props: CHARACTER_SELECTOR_PROPS) => {
           </button>
         ))}
       </div>
-      {/* <Modal
+      <Modal
         closeModal={() => setIsVisible(false)}
         isVisible={isVisible}
         render={(
@@ -65,7 +66,7 @@ const CharacterSelector = (props: CHARACTER_SELECTOR_PROPS) => {
             setSelectedCharacter={setSelectedCharacter}
           />
         )}
-      /> */}
+      />
     </React.Fragment>
   )
 }

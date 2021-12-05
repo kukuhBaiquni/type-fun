@@ -8,13 +8,13 @@ export interface MODAL_PROPS {
   closeModal?: () => void
   render: React.ReactElement
   persist?: boolean
-  size: string
+  size?: string
 }
 
 const Modal = (props: MODAL_PROPS) => {
   const cancelButtonRef = useRef(null)
   const {
-    isVisible, closeModal = () => {}, render, persist, size,
+    isVisible, closeModal = () => {}, render, persist, size = 'max-w-lg',
   } = props
 
   return (
