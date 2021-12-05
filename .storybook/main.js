@@ -9,6 +9,7 @@ module.exports = {
     '@storybook/addon-essentials',
     '@storybook/addon-docs',
     '@storybook/addon-postcss',
+    "storybook-addon-next-router"
   ],
   staticDirs: ['../public'],
   typescript: {
