@@ -18,6 +18,19 @@ Component for displaying character list and character path popup
 File Path: **`/components/common/character-selector/index.tsx`**. <br/>
 Used by: **Any contribution pages in `/pages/contribution/*`**.
 
+_This Component only displaying list of `baseClass` character and `modal` component_
+
+**Props:**
+
+- `title`: Title of contribution type
+- `subtitle`: Subtitle of contribution type
+
+**State:**
+
+- `[isVisible, setIsVisible]`: State for controling modal visibility
+- `[data, setData]`: State for storing character data, when character list is choosed (specify which character path would be displayed in `modal`)
+- `[selectedCharacter, setSelectedCharacter]`: State for storing choosed character path inside `modal`
+
 Notes:
 
 - This component only used by **`/pages/contribution/*`**.
