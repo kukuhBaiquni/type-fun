@@ -12,15 +12,23 @@ interface CHARACTER_SELECTOR_PROPS{
 
 const CharacterSelector = (props: CHARACTER_SELECTOR_PROPS) => {
   const { title, subtitle } = props
+
+  // This state for controling modal visibility
   const [isVisible, setIsVisible] = useState<boolean>(false)
+
+  // This state for storing baseClass data to specify class path
   const [data, setData] = useState<CHARACTER_ | null>(null)
+
+  // This state for storing selected class path inside modal
   const [selectedCharacter, setSelectedCharacter] = useState<CHARACTER_ | null>({} as CHARACTER_)
 
+  // When modal is opened, we set the choosed baseClass to specify class path in the modal
   const showModalAndSetData = (character: CHARACTER_) => {
     setIsVisible(true)
     setData(character)
   }
 
+  // When modal is closed/opened, selectedCharacter must be cleared
   useEffect(() => {
     if (isVisible) setSelectedCharacter(null)
   }, [isVisible])
