@@ -1,16 +1,16 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import { Meta, Story } from '@storybook/react'
 import React from 'react'
-import ClassTree, { CLASS_TREE_PROPS } from 'components/common/character-selector/class-tree'
+import SecondPath, { SECOND_PATH_PROPS } from 'components/common/character-selector/second-path'
 import { baseClass } from 'constant/characters'
 
 export default {
-  title: 'Components/common/character-selector/class-tree',
-  component: ClassTree,
+  title: 'Components/common/character-selector/second-path',
+  component: SecondPath,
   parameters: {
     docs: {
       description: {
-        component: 'Component for displaying character path inside `modal`',
+        component: 'Component for displaying character path inside `modal`. Actually this component only displaying `firstClass` character path, but there are the rest of character path displayed.',
       },
     },
   },
@@ -28,31 +28,26 @@ export default {
       description: 'Function for storing selected character path inside modal',
       control: false,
     },
-    closeModal: {
-      description: 'Function for close modal',
-      control: false,
-    },
   },
 } as Meta
 
-const Template: Story<CLASS_TREE_PROPS> = (args) => {
+const Template: Story<SECOND_PATH_PROPS> = (args) => {
   const { data } = args
   if (typeof data === 'number') {
     args.data = baseClass[data]
   }
-  return <ClassTree {...args} />
+  return <SecondPath {...args} />
 }
 
 Template.args = {
   data: baseClass[0],
   selectedCharacter: null,
   setSelectedCharacter: () => {},
-  closeModal: () => {},
 }
 
-export const ClassTreeExample = Template.bind({})
+export const SecondPathExample = Template.bind({})
 
-ClassTreeExample.args = {
+SecondPathExample.args = {
   ...Template.args,
   data: baseClass[1],
 }

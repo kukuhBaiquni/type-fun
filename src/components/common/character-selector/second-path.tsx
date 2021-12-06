@@ -2,14 +2,20 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import { ChevronDoubleDownIcon, CheckCircleIcon } from '@heroicons/react/solid'
-import { firstClass } from 'constant/characters'
+import { firstClass, CHARACTER_ } from 'constant/characters'
 import clsx from 'clsx'
-// import { CLASS_TREE_PROPS } from './class-tree'
 import LastPath from './last-path'
 
-const SecondPath = (props: any) => {
+export interface SECOND_PATH_PROPS {
+  data: CHARACTER_ | null
+  selectedCharacter: CHARACTER_ | null
+  // eslint-disable-next-line no-unused-vars
+  setSelectedCharacter: (data: CHARACTER_ | null) => void
+}
+const SecondPath = (props: SECOND_PATH_PROPS) => {
   const { data, setSelectedCharacter, selectedCharacter } = props
-  const firstClassData = firstClass.filter((cls) => cls.characterId === data.characterId)
+  const firstClassData = firstClass.filter((cls) => cls.characterId === data?.characterId)
+
   return (
     <div className={clsx(
       firstClassData?.length === 3 ? 'grid-cols-3' : 'grid-cols-4',
@@ -22,11 +28,11 @@ const SecondPath = (props: any) => {
             {selectedCharacter?.name === item.name ? (
               <CheckCircleIcon className='w-5 h-5 mb-2 text-green-600' />
             ) : (
-              <ChevronDoubleDownIcon className={`w-5 h-5 mb-2 ${data.textColor}`} />
+              <ChevronDoubleDownIcon className={`w-5 h-5 mb-2 ${data?.textColor}`} />
             )}
             <div className={clsx(
               selectedCharacter?.name === item?.name
-                ? data.bgColor
+                ? data?.bgColor
                 : 'dark:bg-gray-500 bg-gray-400',
               'p-1 mb-1 flex flex-col items-center cursor-pointer hover:opacity-75 transition-all duration-300',
             )}
