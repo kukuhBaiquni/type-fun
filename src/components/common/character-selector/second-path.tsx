@@ -12,6 +12,7 @@ export interface SECOND_PATH_PROPS {
   // eslint-disable-next-line no-unused-vars
   setSelectedCharacter: (data: CHARACTER_ | null) => void
 }
+
 const SecondPath = (props: SECOND_PATH_PROPS) => {
   const { data, setSelectedCharacter, selectedCharacter } = props
   const firstClassData = firstClass.filter((cls) => cls.characterId === data?.characterId)
