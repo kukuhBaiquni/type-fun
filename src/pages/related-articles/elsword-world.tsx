@@ -89,7 +89,7 @@ const ElswordWorld = () => (
           <div className='p-2 bg-paper-general grid grid-cols-1 gap-y-5'>
             {item.towns.map((town, index) => (
               <div key={index}>
-                <div className='flex gap-x-2'>
+                <div className='flex gap-x-2 mb-2'>
                   <Image
                     alt={town.name}
                     className='object-cover'
