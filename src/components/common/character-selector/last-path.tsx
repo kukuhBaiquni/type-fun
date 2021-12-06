@@ -5,7 +5,6 @@ import {
 } from 'constant/characters'
 import { ChevronDoubleDownIcon, CheckCircleIcon } from '@heroicons/react/solid'
 import clsx from 'clsx'
-// import { CLASS_TREE_PROPS } from './class-tree'
 
 const LastPath = (props: any) => {
   const {
