@@ -1,7 +1,7 @@
 const Character = () => {
-  const b = 43
+  const brr = 43
   return (
-    <div>{b}</div>
+    <div>{brr}</div>
   )
 }
 
