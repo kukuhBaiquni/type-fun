@@ -2,14 +2,11 @@ import Link from 'next/link'
 import clsx from 'clsx'
 import DUNGEONS from 'constant/dungeons'
 import { TYPE_TOWN } from 'constant/towns'
-import { ReactElement } from 'react'
 
-interface Props {
+const Dungeon = (props: {
   townId: number
   town: TYPE_TOWN
-}
-
-const Dungeon = (props: Props):ReactElement => {
+}) => {
   const { townId, town } = props
   const url = (text:string) => text.toLowerCase().replace(/\s/g, '-')
   const data = DUNGEONS.filter((dungeon) => dungeon.townId === townId)

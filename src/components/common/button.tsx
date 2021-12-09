@@ -2,7 +2,7 @@
 import { ReactElement } from 'react'
 import clsx from 'clsx'
 
-export interface BUTTON_PROPS {
+export type BUTTON_PROPS = {
   type?: 'button' | 'submit'
   label?: string
   onClick?: () => void

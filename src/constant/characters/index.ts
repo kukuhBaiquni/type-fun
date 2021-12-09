@@ -4,7 +4,7 @@ export { default as secondClass } from './second-class'
 export { default as transcendentClass } from './transcendent-class'
 export { default as thirdClass } from './third-class'
 
-export interface CHARACTER_ {
+export type CHARACTER_ = {
   name: string
   img: string
   bgColor: string

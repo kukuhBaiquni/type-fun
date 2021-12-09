@@ -1,7 +1,7 @@
 import BaseClass from './character/base-class'
 import Town from './town/town'
 
-export interface TYPE_ROUTES {
+export type TYPE_ROUTES = {
   name: string
   path: string
   childData: boolean

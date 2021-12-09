@@ -6,7 +6,7 @@ import {
 import { ChevronDoubleDownIcon, CheckCircleIcon } from '@heroicons/react/solid'
 import clsx from 'clsx'
 
-export interface LAST_PATH_PROPS {
+export type LAST_PATH_PROPS = {
   data: CHARACTER_ | null
   selectedCharacter: CHARACTER_ | null
   // eslint-disable-next-line no-unused-vars
