@@ -1,3 +1,4 @@
+import { ReactElement } from 'react'
 import BaseClass from './character/base-class'
 import Town from './town/town'
 
@@ -5,7 +6,7 @@ export type TYPE_ROUTES = {
   name: string
   path: string
   childData: boolean
-  childRenderer: React.ReactElement | null
+  childRenderer: ReactElement | null
   collapsed: boolean
   h: string
 }

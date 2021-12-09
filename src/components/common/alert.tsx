@@ -1,10 +1,11 @@
 import {
   InformationCircleIcon, CheckCircleIcon, ExclamationCircleIcon, XCircleIcon,
 } from '@heroicons/react/solid'
+import { ReactElement } from 'react'
 
 export type ALERT_PROPS = {
   variant: 'success' | 'info' | 'warning' | 'danger'
-  text: string | React.ReactElement
+  text: string | ReactElement
 }
 
 const Alert = ({ variant, text }: ALERT_PROPS) => {

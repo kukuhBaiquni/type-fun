@@ -11,6 +11,7 @@
     "plugin:jsx-a11y/recommended",
     "plugin:react-hooks/recommended",
     "plugin:@typescript-eslint/recommended",
+    "eslint:recommended",
     "next",
     "next/core-web-vitals",
     "plugin:storybook/recommended"
