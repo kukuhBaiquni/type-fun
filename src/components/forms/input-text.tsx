@@ -1,19 +1,18 @@
 /* eslint-disable jsx-a11y/no-autofocus */
-// import PropTypes from 'prop-types'
 import _ from 'lodash/get'
 import { LockClosedIcon } from '@heroicons/react/solid'
-import FormFieldWrapper from '../FormFieldWrapper'
+import FormFieldWrapper from './FormFieldWrapper'
 
-type INPUT_TEXT_PROPS = {
+export type INPUT_TEXT_PROPS = {
   name: string
   label: string
   placeholder: string
-  defaultValue: string
+  defaultValue?: string
   // eslint-disable-next-line no-unused-vars
   register: (n: string) => void
-  errors: object
-  className: string
-  disabled: boolean
+  errors?: object
+  className?: string
+  disabled?: boolean
 }
 
 const InputText = (props: INPUT_TEXT_PROPS) => {
@@ -29,6 +28,7 @@ const InputText = (props: INPUT_TEXT_PROPS) => {
   } = props
 
   const errorMessage = _(errors, `${name}.message`) ?? ''
+  console.log('err', errors)
 
   return (
     <FormFieldWrapper

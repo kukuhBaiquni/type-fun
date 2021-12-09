@@ -6,7 +6,7 @@ import _ from 'lodash/get'
 import NumberFormat from 'react-number-format'
 import { useController, Control } from 'react-hook-form'
 import { LockClosedIcon } from '@heroicons/react/solid'
-import FormFieldWrapper from '../FormFieldWrapper'
+import FormFieldWrapper from './FormFieldWrapper'
 
 type INPUT_NUMBER_PROPS = {
   name: string
@@ -15,7 +15,7 @@ type INPUT_NUMBER_PROPS = {
   defaultValue: string
   control: Control
   errors: object
-  className: string
+  className?: string
   disabled?: boolean
   limit: number
 }
@@ -32,6 +32,7 @@ const InputNumber = (props: INPUT_NUMBER_PROPS) => {
     disabled,
     limit = 1e8,
   } = props
+
   const {
     field: { onChange, value },
   } = useController({

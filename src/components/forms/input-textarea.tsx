@@ -1,5 +1,5 @@
 import _ from 'lodash/get'
-import FormFieldWrapper from '../FormFieldWrapper'
+import FormFieldWrapper from './FormFieldWrapper'
 
 type INPUT_TEXTAREA_PROPS = {
   name: string
