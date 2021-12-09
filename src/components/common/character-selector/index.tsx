@@ -5,12 +5,10 @@ import { baseClass, CHARACTER_ } from 'constant/characters'
 import Modal from 'components/common/modal'
 import ClassTree from './class-tree'
 
-interface CHARACTER_SELECTOR_PROPS{
+const CharacterSelector = (props: {
   title: string
   subtitle: string
-}
-
-const CharacterSelector = (props: CHARACTER_SELECTOR_PROPS) => {
+}) => {
   const { title, subtitle } = props
 
   // This state for controling modal visibility

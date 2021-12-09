@@ -5,11 +5,7 @@ import {
   firstClass, secondClass, transcendentClass, thirdClass,
 } from 'constant/characters'
 
-interface Props {
-  characterIndex: number
-}
-
-const NextClass = (props:Props) => {
+const NextClass = (props: { characterIndex: number }) => {
   const { characterIndex } = props
   const url = (text: string) => text.toLowerCase().replace(/\s/g, '-')
 

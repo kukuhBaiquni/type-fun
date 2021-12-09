@@ -3,7 +3,7 @@ import React, { Fragment, useRef } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import clsx from 'clsx'
 
-export interface MODAL_PROPS {
+export type MODAL_PROPS = {
   isVisible?: boolean
   closeModal?: () => void
   render: React.ReactElement

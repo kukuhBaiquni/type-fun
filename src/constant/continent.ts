@@ -1,4 +1,4 @@
-export interface TYPE_CONTINENT {
+export type TYPE_CONTINENT = {
   name: string
   description: string
   teritority: {

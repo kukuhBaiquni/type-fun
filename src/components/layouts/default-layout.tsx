@@ -8,11 +8,7 @@ const Header = dynamic(
   { ssr: false },
 )
 
-interface Props {
-  children: ReactElement
-}
-
-const ContributionLayout = (props:Props) => {
+const ContributionLayout = (props: { children: ReactElement}) => {
   const { children } = props
   return (
     <div className='bg-general transition-all duration-300 min-h-screen'>

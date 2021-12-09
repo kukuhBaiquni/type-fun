@@ -7,7 +7,7 @@ import { CHARACTER_ } from 'constant/characters'
 import clsx from 'clsx'
 import SecondPath from './second-path'
 
-export interface CLASS_TREE_PROPS {
+export type CLASS_TREE_PROPS = {
   data: CHARACTER_ | null
   selectedCharacter: CHARACTER_ | null
   // eslint-disable-next-line no-unused-vars

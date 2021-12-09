@@ -2,7 +2,7 @@ import {
   InformationCircleIcon, CheckCircleIcon, ExclamationCircleIcon, XCircleIcon,
 } from '@heroicons/react/solid'
 
-export interface ALERT_PROPS {
+export type ALERT_PROPS = {
   variant: 'success' | 'info' | 'warning' | 'danger'
   text: string | React.ReactElement
 }

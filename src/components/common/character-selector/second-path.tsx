@@ -6,7 +6,7 @@ import { firstClass, CHARACTER_ } from 'constant/characters'
 import clsx from 'clsx'
 import LastPath from './last-path'
 
-export interface SECOND_PATH_PROPS {
+export type SECOND_PATH_PROPS = {
   data: CHARACTER_ | null
   selectedCharacter: CHARACTER_ | null
   // eslint-disable-next-line no-unused-vars
