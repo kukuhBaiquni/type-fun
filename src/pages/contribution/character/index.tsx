@@ -4,7 +4,7 @@ import Head from 'next/head'
 import Layout from 'components/layouts/default-layout'
 import CharacterSelector from 'components/common/character-selector'
 
-const ContributionCharacter = () => (
+const Character = () => (
   <Fragment>
     <Head>
       <title>Elfun - Contributor</title>
@@ -20,10 +20,10 @@ const ContributionCharacter = () => (
   </Fragment>
 )
 
-ContributionCharacter.getLayout = (page: React.ReactElement) => (
+Character.getLayout = (page: React.ReactElement) => (
   <Layout>
     {page}
   </Layout>
 )
 
-export default ContributionCharacter
+export default Character
