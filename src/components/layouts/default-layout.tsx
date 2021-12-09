@@ -8,7 +8,7 @@ const Header = dynamic(
   { ssr: false },
 )
 
-const ContributionLayout = (props: { children: ReactElement}) => {
+const DefaultLayout = (props: { children: ReactElement}) => {
   const { children } = props
   return (
     <div className='bg-general transition-all duration-300 min-h-screen'>
@@ -30,4 +30,4 @@ const ContributionLayout = (props: { children: ReactElement}) => {
   )
 }
 
-export default ContributionLayout
+export default DefaultLayout
