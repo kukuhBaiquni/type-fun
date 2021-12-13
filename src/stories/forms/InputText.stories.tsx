@@ -10,41 +10,24 @@ export default {
     name: {
       control: false,
       description: 'Name for register in `react-hook-form`',
-      defaultValue: {
-        summary: 'empty',
-      },
     },
     label: {
       description: 'Label for the input field',
-      defaultValue: {
-        summary: 'empty',
-      },
     },
     placeholder: {
       control: { type: 'text' },
       description: 'Placeholder of the input field',
-      defaultValue: {
-        summary: 'empty',
-      },
     },
     register: {
+      control: false,
       description: 'Inner ref of `react-hook-form`',
-      defaultValue: {
-        summary: 'empty',
-      },
     },
     errors: {
-      control: false,
-      description: 'This object provided by `react-hook-form` to display error message',
-      defaultValue: {
-        summary: '{}',
-      },
+      control: { type: 'text' },
+      description: 'This object provided by `react-hook-form` to display error message. The actual data type for `errors` is `object` but we make this docs flexible. So you can try the error message in this example',
     },
     className: {
       description: 'Additional `className` for styling the input field',
-      defaultValue: {
-        summary: 'empty',
-      },
     },
     disabled: {
       description: 'Disabled state of input',
@@ -61,10 +44,15 @@ export default {
 
 const Template: Story<INPUT_TEXT_PROPS> = (args) => {
   const { register } = useForm()
+  const { errors } = args
   const newArgs = {
     ...args,
     name: 'name',
-    errors: {},
+    errors: {
+      name: {
+        message: errors,
+      },
+    },
     register,
   }
 
