@@ -28,7 +28,6 @@ const InputText = (props: INPUT_TEXT_PROPS) => {
   } = props
 
   const errorMessage = _(errors, `${name}.message`) ?? ''
-  console.log('err', errors)
 
   return (
     <FormFieldWrapper
