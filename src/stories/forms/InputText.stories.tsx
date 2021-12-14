@@ -1,7 +1,7 @@
 import { Meta, Story } from '@storybook/react'
 import InputText, { INPUT_TEXT_PROPS } from 'components/forms/input-text'
 import { useForm } from 'react-hook-form'
-
+// little commit
 export default {
   component: InputText,
   title: 'Components/forms/input-text',
